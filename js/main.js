@@ -1,4 +1,4 @@
 ;(function(){
   'use strict';
-	angular.module('languagelearningApp', ['ngRoute'])
+	angular.module('languagelearningApp', ['ngRoute', 'mgcrea.ngStrap.modal'])
 }());

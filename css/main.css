@@ -1,3 +1,4 @@
-.container-fluid {
-	max-width: 500px;
+body {
+	background-image: url(../images/crossword.png);
+	max-width: 900px;
 }
