@@ -3,16 +3,12 @@
     <tr>
       <th>Tigrigna</th>
       <th>English</th>
-      <th>Image</th>
-      <th>Show</th>
     </tr>  
   </thead>
     <tbody>
-      <tr ng-repeat="(dayId, day) in day.vocabularies">  
-        <td>{{day.tigrigna}}</td>
-        <td>{{day.english}}</td>
-        <td><img class="day-img" ng-src="{{day.image}}"></td>
-        <td><a class="btn btn-primary" href="/#/{{dayId}}/show">Show</a></td>
+      <tr ng-repeat="(dayId, day) in dayCtrl.days">  
+        <td>{{day.Tigrigna}}</td>
+        <td>{{day.English}}</td>
       </tr>
     </tbody>
 </table>

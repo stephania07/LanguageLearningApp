@@ -11,6 +11,16 @@
 	   controller :  'LoginController',
 	   controllerAs: 'login'			
 	})
+	.when('/register', {
+	   templateUrl : 'views/register.html',
+	   controller :  'RegisterController',
+	   controllerAs: 'register'			
+	})
+
+	// .when('/logout', {
+	//    template : '',
+	//    controller :  'LogoutController'			
+	// })
 	.when('/home', {
 		templateUrl : 'views/home.html',
 		controller : 'HomeController',
@@ -28,18 +38,23 @@
 	})
 	.when('/vocabulary/number', {
 		templateUrl : 'views/number.html',
-		controller : 'VocabularyController',
-		controllerAs: 'vocal'
+		controller : 'NumberController',
+		controllerAs: 'numCtrl'
 	})
 	.when('/vocabulary/days', {
 		templateUrl : 'views/days.html',
-		controller : 'VocabularyController',
-		controllerAs: 'vocal'
+		controller : 'DaysController',
+		controllerAs: 'dayCtrl'
 	})
 	.when('/vocabulary/time', {
 		templateUrl : 'views/time.html',
 		controller : 'VocabularyController',
 		controllerAs: 'vocal'
+	})
+	.when('/greetings', {
+        templateUrl : 'views/greetings.html',
+        controlller : 'GreetingsController',
+        controllerAs : 'greetCtrl'
 	})
 
 	})				

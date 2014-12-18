@@ -2,17 +2,13 @@
   <thead>
     <tr>
       <th>Tigrigna</th>
-      <th>English</th>
-      <th>Image</th>
-      <th>Show</th>
+      <th>Number</th>
     </tr>  
   </thead>
     <tbody>
-      <tr ng-repeat="(numberId, number) in number.vocabularies">  
-        <td>{{number.tigrigna}}</td>
-        <td>{{number.english}}</td>
-        <td><img class="num-img" ng-src="{{num.image}}"></td>
-        <td><a class="btn btn-primary" href="/#/{{numberId}}/show">Show</a></td>
+      <tr ng-repeat="(numberId, number) in numCtrl.numbers">  
+        <td>{{number.Tigrigna}}</td>
+        <td>{{number.Number}}</td>
       </tr>
     </tbody>
 </table>

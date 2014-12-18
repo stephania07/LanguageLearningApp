@@ -2,3 +2,7 @@ body {
 	background-image: url(../images/crossword.png);
 	max-width: 900px;
 }
+.btn {
+	float: right;
+
+}

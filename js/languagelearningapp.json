@@ -1,0 +1,92 @@
+{
+  "greetings" : [ 
+  {
+    "English" : "Hello!",
+    "Image" : "https://forums.oneplus.net/attachments/hi-there-icon-png.164495/",
+    "Tigrigna" : "Selam"
+  }, {
+    "English" : "kemey hadirka",
+    "Image" : "http://media1.santabanta.com/full1/Miscellaneous/Good%20Morning/good-morning-2a.jpg",
+    "Tigrigna" : "Good morning!"
+  }, {
+    "English" : "kemey wielkum",
+    "Image" : "http://www.goodlightscraps.com/content/good-day/good-day-7.jpg",
+    "Tigrigna" : "Good day!"
+  } ],
+  "vocabularies" : [ {
+    "English" : "father",
+    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
+    "Tigrigna" : "abo"
+  }, {
+    "English" : "Mother",
+    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
+    "Tigrigna" : "ade"
+  }, {
+    "English" : "friend",
+    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
+    "Tigrigna" : "arki"
+  }, {
+    "English" : "Mr",
+    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
+    "Tigrigna" : "ato"
+  }, {
+    "English" : "husband",
+    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
+    "Tigrigna" : "beAl biet"
+  } ],
+  "numbers":[
+    {
+     "Number":  "1",
+     "Tigrigna" : "hade"
+    },
+    {
+     "Number"   :  "2",
+     "Tigrigna" : "kilte"
+    },
+     {
+     "Number":  "3",
+     "Tigrigna" : "seleste"
+    },
+    {
+     "Number"   :  "4",
+     "Tigrigna" : "arbaet"
+    },
+    {
+     "Number":  "5",
+     "Tigrigna" : "hamushte"
+    },
+    {
+     "Number"   :  "6",
+     "Tigrigna" : "shudushte"
+    }
+  ],
+  "days": 
+  [{"Tigrigna":"senuy",
+  "English":  "Monday" 
+  },
+  {  
+  "Tigrigna":   " selus",
+  "English":  "Tuesday"  
+  },
+  {  
+  "Tigrigna":   "rebuE",
+  "English":  "Wednesday" 
+  },
+  {  
+  "Tigrigna":   " Hamus",
+  "English":  "Thursday" 
+  },
+  {    
+  "Tigrigna":   " Arbi",
+  "English":  "Friday" 
+  },
+  {       
+  "Tigrigna":   "qedam",
+  "English":  "Saturday " 
+  },
+  {     
+  "Tigrigna": "senbet",
+  "English":"Sunday " 
+  }]
+  }        
+
