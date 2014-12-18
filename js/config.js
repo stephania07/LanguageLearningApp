@@ -37,12 +37,12 @@
 		controllerAs: 'general'
 	})
 	.when('/vocabulary/number', {
-		templateUrl : 'views/number.html',
+		templateUrl : 'views/numdays.html',
 		controller : 'NumberController',
 		controllerAs: 'numCtrl'
 	})
 	.when('/vocabulary/days', {
-		templateUrl : 'views/days.html',
+		templateUrl : 'views/numdays.html',
 		controller : 'DaysController',
 		controllerAs: 'dayCtrl'
 	})

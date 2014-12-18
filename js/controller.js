@@ -105,9 +105,6 @@
         .error(function(err){
           console.log(err);
         });
-    })
-    .controller('DaysController', function($http){
-      var vm = this;
       $http.get('https://languagelearningapp.firebaseio.com/days.json')
         .success(function(data){
           vm.days = data;

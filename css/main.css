@@ -4,5 +4,10 @@ body {
 }
 .btn {
 	float: right;
-
+}
+#flash {
+	height: 200px;
+	width: 200px;
+	background-color: #CCC;
+	border : 1px black solid;
 }
