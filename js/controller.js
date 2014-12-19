@@ -10,7 +10,7 @@
        password : pass
        }, function(error, authData) {
          if (error === null) {
-          cb();
+           cb();
            console.log("User logged in successfully", authData);
        } else {
            console.log("Error in loggin user:", error);
@@ -23,8 +23,8 @@
      var vm = this;  
      vm.login = function(){
       authFactory.login(vm.email, vm.password, function(){
-      // //$location.path('/');
-      // $scope.apply();  
+         $location.path('/home');
+         $scope.$apply();  
       });
      };
       vm.forgotPassword = function(){
@@ -39,9 +39,6 @@
           }
         });
       }
-    })
-    .controller('RegisterController', function($scope, $location){
-      var vm =  this;
       vm.register = function(){
         var ref = new Firebase("https://languagelearningapp.firebaseio.com")
         ref.createUser({
@@ -49,33 +46,33 @@
         password : vm.password
         }, function(error, authData) {
           if (error === null) {
-             //$location.path('/home');
-             //$scope.apply();
-            //vm.login();
+            $location.path('/home');
+            $scope.$apply();
+            vm.login();
             console.log("User created successfully", authData);
           } else {
             console.log("Error creating user:", error);
           }
         })
        };
-     })
-    // .controller('LogoutController', function($scope, $location){
-    //   var ref = new Firebase("https://languagelearningapp.firebaseio.com");
-    //   ref.unauth(function(){
-    //     $location.path('/');
-    //     $scope.apply();
-    //   });
-    // })
+    })
+    .controller('LogoutController', function($scope, $location){
+      var ref = new Firebase("https://languagelearningapp.firebaseio.com");
+      ref.unauth(function(){
+        $location.path('/');
+        $scope.$apply();
+      });
+    })
     .controller('HomeController', function($scope, $modal){
       var vm = this;
       var myModal = $modal({
-        title: 'Hello {{uid}}!', 
+        title: "Hello {{uid}}!", 
         content: 'Welcome to 60min Language Learning!', 
         show: true
       });
       var myOtherModal = $modal({
         scope: $scope,
-        template: 'viwes/home.html', 
+        template: '/#/home', 
         show: false
       });
       // Show when some event occurs (use $promise property to ensure the template has been loaded)
@@ -122,5 +119,27 @@
         .error(function(err){
           console.log(err);
         });
-    })         
+    }) 
+    .controller('DemonstrativeController', function($http) {
+      var demo = this;
+      demo.numbers = [];
+      $http.get('https://languagelearningapp.firebaseio.com/numbers.json')
+        .success(function(data){
+          demo.numbers = data;
+          console.log(data[0]);
+        });
+      
+      function randomSelect(nums){
+        var result = Math.floor((Math.random()*nums)%nums);
+        return result;
+         console.log(result);
+
+      }
+      function nextcard($http){
+        $http.get('https://languagelearningapp.firebaseio.com/numbers.json');
+         
+      }
+      console.log(randomSelect(8));
+      
+    })        
 }());

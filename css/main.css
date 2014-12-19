@@ -11,3 +11,8 @@ body {
 	background-color: #CCC;
 	border : 1px black solid;
 }
+.word-img {
+	border-radius: 100%;
+	height: 200x;
+	width: 200px;
+}

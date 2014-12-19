@@ -3,7 +3,6 @@
     <tr>
       <th>Tigrigna</th>
       <th>English</th>
-      <th>Image</th>
       <th>Show</th>
     </tr>  
   </thead>
@@ -11,7 +10,6 @@
       <tr ng-repeat="(timeId, time) in time.vocabularies">  
         <td>{{time.Tigrigna}}</td>
         <td>{{time.English}}</td>
-        <td><img class="time-img" ng-src="{{time.Image}}"></td>
         <td><a class="btn btn-primary" href="/#/{{timeId}}/show">Show</a></td>
       </tr>
     </tbody>

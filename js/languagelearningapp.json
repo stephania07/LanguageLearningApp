@@ -17,47 +17,36 @@
     "English" : "father",
     "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
     "Tigrigna" : "abo"
-  }, {
-    "English" : "Mother",
-    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
-    "Tigrigna" : "ade"
-  }, {
-    "English" : "friend",
-    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
-    "Tigrigna" : "arki"
-  }, {
+  },{
     "English" : "Mr",
-    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
+    "Image" : "https://pbs.twimg.com/profile_images/2527598777/p39hqc9c1vxrvm9q7tbj.jpeg",
     "Tigrigna" : "ato"
-  }, {
-    "English" : "husband",
-    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
-    "Tigrigna" : "beAl biet"
-  } ],
+   } ],
   "numbers":[
     {
-     "Number":  "1",
-     "Tigrigna" : "hade"
+     "Tigrigna" : "hade",
+     "English":  "one"
     },
-    {
-     "Number"   :  "2",
-     "Tigrigna" : "kilte"
+    { 
+     "Tigrigna" : "kilte",
+     "English"   :  "two"
     },
      {
-     "Number":  "3",
-     "Tigrigna" : "seleste"
+     "Tigrigna" : "seleste",
+     "English":  "three"
     },
     {
-     "Number"   :  "4",
-     "Tigrigna" : "arbaet"
+     "Tigrigna" : "arbaet",
+     "English"   :  "four"
     },
     {
-     "Number":  "5",
-     "Tigrigna" : "hamushte"
+      "Tigrigna" : "hamushte",
+     "English":  "five"
+     
     },
-    {
-     "Number"   :  "6",
-     "Tigrigna" : "shudushte"
+    { "Tigrigna" : "shudushte",
+     "English"   :  "six"
+     
     }
   ],
   "days": 
