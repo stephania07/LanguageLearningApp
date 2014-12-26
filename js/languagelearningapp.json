@@ -12,8 +12,11 @@
     "English" : "kemey wielkum",
     "Image" : "http://www.goodlightscraps.com/content/good-day/good-day-7.jpg",
     "Tigrigna" : "Good day!"
-  } ],
-  "vocabularies" : [ {
+  } 
+  ],
+
+  "vocabularies" : [ 
+  {
     "English" : "father",
     "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
     "Tigrigna" : "abo"
@@ -21,7 +24,9 @@
     "English" : "Mr",
     "Image" : "https://pbs.twimg.com/profile_images/2527598777/p39hqc9c1vxrvm9q7tbj.jpeg",
     "Tigrigna" : "ato"
-   } ],
+   }
+    ],
+
   "numbers":[
     {
      "Tigrigna" : "hade",
@@ -45,12 +50,12 @@
      
     },
     { "Tigrigna" : "shudushte",
-     "English"   :  "six"
-     
+     "English"   :  "six"  
     }
   ],
-  "days": 
-  [{"Tigrigna":"senuy",
+
+  "days": [
+  {"Tigrigna":"senuy",
   "English":  "Monday" 
   },
   {  
@@ -76,6 +81,87 @@
   {     
   "Tigrigna": "senbet",
   "English":"Sunday " 
-  }]
+  }
+  ],
+
+  "months": [
+  {
+    "Tigrigna":"Tri",
+  "English":  "January" 
+  },
+  {  
+  "Tigrigna":   "lekatit",
+  "English":  "February"  
+  },
+  {  
+  "Tigrigna":   "megabit",
+  "English":  "March" 
+  },
+  {  
+  "Tigrigna":   "miyazya",
+  "English":  "April" 
+  },
+  {    
+  "Tigrigna":   "gnbot",
+  "English":  "May" 
+  },
+  {       
+  "Tigrigna":   "sene",
+  "English":  "June" 
+  },
+  {     
+  "Tigrigna": "hamle",
+  "English":"July " 
+  },
+  {  
+  "Tigrigna":   "nehase",
+  "English":  "August" 
+  },
+  {  
+  "Tigrigna":   "meskerem",
+  "English":  "September" 
+  },
+  {    
+  "Tigrigna":   "tikimti",
+  "English":  "October" 
+  },
+  {       
+  "Tigrigna":   "Hidar",
+  "English":  "November" 
+  },
+  {     
+  "Tigrigna": "tahsas",
+  "English":"December " 
+  }
+  ],
+  "animals": [
+  {"Tigrigna":"Tsatse",
+  "English":  "Ant" 
+  },
+  {  
+  "Tigrigna":   "Nihbi",
+  "English":  "Bee"  
+  },
+  {  
+  "Tigrigna":   "Chiru",
+  "English":  "Bird" 
+  },
+  {  
+  "Tigrigna":   "Tsimbilalie",
+  "English":  "Butterfly" 
+  },
+  {    
+  "Tigrigna":   "Harmaz",
+  "English":  "Elephant" 
+  },
+  {       
+  "Tigrigna":   "Asa",
+  "English":  "Fish " 
+  },
+  {     
+  "Tigrigna": "hamema",
+  "English":"Fly " 
+  }
+  ]
   }        
 

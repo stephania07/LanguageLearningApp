@@ -93,6 +93,18 @@
           console.log(err);
         });
     })
+    .controller('ShowController', function($http, $routeParams){
+      var vm = this;
+      var id = $routeParams.id;
+      $http.get('https://languagelearningapp.firebaseio.com/vocabularies' + id + '.json')
+        .success(function(data){
+          vm.vocabularies = data;
+        })
+        .error(function(err){
+          console.log(err);
+        })
+
+    })
     .controller('NumberController', function($http){
       var vm = this;
       $http.get('https://languagelearningapp.firebaseio.com/numbers.json')
@@ -120,26 +132,55 @@
           console.log(err);
         });
     }) 
-    .controller('DemonstrativeController', function($http) {
-      var demo = this;
-      demo.numbers = [];
-      $http.get('https://languagelearningapp.firebaseio.com/numbers.json')
+    .controller('DemonstrativeController', function($http, $routeParams, $scope) {
+      var vm = this;
+
+      vm.nextcard = function(){
+        var $target = document.querySelector('#flash');
+        $target.innerHTML= "";
+        var $id = $routeParams.id;
+        var url = "https://languagelearningapp.firebaseio.com/numbers/" + $id  + "/English.json";
+        //console.log(url);
+        $http.get(url).
+        success(function(data){
+          $scope.numbers = data;
+          console.log(data);
+          angular.element($target).append(data);
+        })
+        // $http.get("https://languagelearningapp.firebaseio.com/numbers.json")
+        // .success(function(data){
+        //   vm.numbers = data;
+        //   console.log(data);
+        //   for(var i=0; i<data.length; i++){
+        //     var key = data[i].English;
+        //     for(var j=0; j<key.length; j++){
+        //       console.log(key);
+        //       angular.element($target).append(key);
+        //    }
+        //    }
+        //   })
+      };
+      vm.truecard = function(){
+        var $target = document.querySelector('#flash');
+        $target.innerText = "";
+        $http.get("https://languagelearningapp.firebaseio.com/numbers.json")
         .success(function(data){
-          demo.numbers = data;
-          console.log(data[0]);
-        });
-      
-      function randomSelect(nums){
+          vm.numbers = data; 
+          for (var i=0; i<data.length; i++){
+            if(data[i].English) {
+              console.log(angular.element($target).append(data[i].Tigrigna));
+          }
+          
+         }
+        })
+      };
+
+      function getRandomInt(nums){
         var result = Math.floor((Math.random()*nums)%nums);
         return result;
-         console.log(result);
-
-      }
-      function nextcard($http){
-        $http.get('https://languagelearningapp.firebaseio.com/numbers.json');
-         
-      }
-      console.log(randomSelect(8));
+         //console.log(result);
+      }      
+        console.log(getRandomInt(6));
       
-    })        
+    }) 
 }());

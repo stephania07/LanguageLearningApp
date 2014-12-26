@@ -4,7 +4,7 @@
       <th>Tigrigna</th>
       <th>English</th>
       <th>Image</th>
-      <th>Show</th>
+      <!-- <th>Show</th> -->
     </tr>  
   </thead>
     <tbody>
@@ -12,7 +12,9 @@
         <td>{{general.Tigrigna}}</td>
         <td>{{general.English}}</td>
         <td><img class="word-img" ng-src="{{general.Image}}"></td>
-        <td><a class="btn btn-primary" href="/#/{{generalId}}/show">Show</a></td>
+        <td>
+        <a class="btn btn-primary" href="/#/vocabulary/general/{{generalId}}">Show</a>
+        </td>
       </tr>
     </tbody>
 </table>

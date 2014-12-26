@@ -55,6 +55,20 @@
         controlller : 'GreetingsController',
         controllerAs : 'greetCtrl'
 	})
-
+	.when('/flashcards', {
+		templateUrl : 'views/flashcards.html',
+		controller: 'DemonstrativeController',
+		controllerAs : 'demonstrate'
+	})
+	.when('/flip', {
+		templateUrl : 'views/flip.html',
+		controller: 'NumberController',
+		controllerAs : 'numCtrl'
+	})
+	.when('/vocabulary/general/:id', {
+		templateUrl: 'views/show.html',
+		controller: 'ShowController',
+		controllerAs: 'show'
+	})
 	})				
 }());

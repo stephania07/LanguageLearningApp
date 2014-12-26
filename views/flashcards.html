@@ -1,0 +1,19 @@
+  <div>
+    <h1>Challenge yourself</h1>
+      <p>English to Tigrigna</p>
+        <div>
+          <div id="flash">
+            <div class="question" >
+                {{number.English}}
+            </div> 
+            <div class="answer"> 
+                {{number.Tigrigna}}
+            </div>       
+          </div>
+        </div>
+     <div class="pull-left">
+       <div id="btn-add" class="btn btn-primary" ng-click="demonstrate.nextcard()">next card </div> 
+       <div id="btn-answer" class="btn btn-primary"  ng-click="demonstrate.truecard()">answer card</div>
+       <div id="btn-clear" class="btn btn-primary" ng-click="demonstrate.resetcard()">reset-card</div>
+     </div>
+  </div>
