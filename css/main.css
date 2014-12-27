@@ -2,9 +2,18 @@ body {
 	background-image: url(../images/crossword.png);
 	max-width: 900px;
 }
-.btn {
+.form-horizontal {
+  margin-top: 100px; 
+
+}
+.btn-default,
+.btn-danger {
 	float: right;
 }
+.log {
+    margin-left: 200px;
+}
+
 #flash {
 	height: 200px;
 	width: 250px;

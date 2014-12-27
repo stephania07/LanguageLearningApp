@@ -1,14 +1,20 @@
-<form name="loginForm"  ng-submit="login.login()" novalidate>
+<form class="form-horizontal" name="loginForm"  ng-submit="login.login()" novalidate>
   <div class="form-group" ng-class="{'has-error':loginForm.$dirty && !login.email}">
-    <label>Email</label>
-    <input type="email"	class="form-control" ng-model="login.email" required>	
+    <label  class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-6">
+      <input type="email"	class="form-control" ng-model="login.email" required>
+    </div>	
 	</div>				
   <div class="form-group" ng-class="{'has-error':loginForm.$dirty && !login.password}">
-    <label>Password</label>
-    <input type="password" class="form-control" ng-model="login.password" required>		
+    <label class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-6">
+    <input type="password" class="form-control" ng-model="login.password" required>	
+    </div>	
   </div>
-	<input type="submit" class="btn btn-primary btn-block" value="Login" ng-class="{disabled: loginForm.$invalid}">
-  <div class="btn btn-warning btn-block" ng-class="{disabled: loginForm.$invalid}" ng-click="login.forgotPassword()">
+  <div class="log">
+	<input type="submit" class="btn btn-primary col-sm-1.5" value="Login" ng-class="{disabled: loginForm.$invalid}">
+  <div class="btn btn-warning col-sm-1.5" ng-class="{disabled: loginForm.$invalid}" ng-click="login.forgotPassword()">
     Forgot Password	
+  </div>
   </div>
 </form>
