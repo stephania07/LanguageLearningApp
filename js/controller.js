@@ -1,68 +1,6 @@
 ;(function(){
   'use strict';
   angular.module('languagelearningApp')
-    .factory('authFactory', function(FIREBASE_URL){
-      var factory = {},
-       ref = new Firebase(FIREBASE_URL);   
-    factory.login = function(email, pass, cb){
-     ref.authWithPassword({
-       email    : email,
-       password : pass
-       }, function(error, authData) {
-         if (error === null) {
-           cb();
-           console.log("User logged in successfully", authData);
-       } else {
-           console.log("Error in loggin user:", error);
-       } 
-      });
-    };
-    return factory;
-  })
-    .controller('LoginController', function(authFactory, $scope, $location){
-     var vm = this;  
-     vm.login = function(){
-      authFactory.login(vm.email, vm.password, function(){
-         $location.path('/home');
-         $scope.$apply();  
-      });
-     };
-      vm.forgotPassword = function(){
-      	var ref = new Firebase("https://languagelearningapp.firebaseio.com");
-      	ref.resetPassword({
-        email : vm.email
-        }, function(error) {
-          if (error === null) {
-            console.log("Password reset email sent successfully");
-          } else {
-            console.log("Error sending password reset email:", error);
-          }
-        });
-      }
-      vm.register = function(){
-        var ref = new Firebase("https://languagelearningapp.firebaseio.com")
-        ref.createUser({
-        email    : vm.email,
-        password : vm.password
-        }, function(error, authData) {
-          if (error === null) {
-            $location.path('/home');
-            $scope.$apply();
-            vm.login();
-            console.log("User created successfully", authData);
-          } else {
-            console.log("Error creating user:", error);
-          }
-        })
-       };
-    })
-    .controller('LogoutController', function($scope, $location){
-      var ref = new Firebase("https://languagelearningapp.firebaseio.com");
-      ref.unauth(function(){
-        $location.path('/');
-        $scope.$apply();
-      });
-    })
     .controller('HomeController', function($scope, $modal){
       var vm = this;
       var myModal = $modal({

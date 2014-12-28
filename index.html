@@ -9,6 +9,10 @@
 	<body>
     <div class="container">
     <h1 ng-show="user"> {{user.password.email}}'s Learning progress</h1>
+    <a class="btn btn-primary" href="/#/vocabulary" ng-show="user">Vocabulary</a>
+    <a class="btn btn-primary" href="/#/greetings" ng-show="user">Greetings</a>
+    <a class="btn btn-primary" href="/#/flashcards" ng-show="user">Cards</a>
+    <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
     <a class="btn btn-default" href="/#/login" ng-hide="user">Login</a>
     <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
     <a class="btn btn-default" href="/#/register" ng-hide="user">Register</a>
@@ -23,8 +27,13 @@
   <script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>
   <script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>	
 		<script src="js/main.js"></script>
-		<script src="js/config.js"></script>
+		<script src="js/main.config.js"></script>
 		<script src="js/controller.js"></script>
-    <script src="js/constants.js"></script>	
+    <script src="js/main.constants.js"></script>
+    <script src="js/auth/auth.controllers.js"></script>
+    <script src="js/auth/auth.factory.js"></script>
+    <script src="js/auth/auth.routes.js"></script>
+    <script src="js/vocabulary/vocabulary.config.js"></script> 
+
 	</body>
 </html>
