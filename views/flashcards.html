@@ -4,16 +4,16 @@
         <div>
           <div id="flash">
             <div class="question" >
-                {{number.English}}
+                {{color.English}}
             </div> 
             <div class="answer"> 
-                {{number.Tigrigna}}
+                {{color.Tigrigna}}
             </div>       
           </div>
         </div>
      <div class="pull-left">
-       <div id="btn-add" class="btn btn-primary" ng-click="demonstrate.nextcard()">next card </div> 
-       <div id="btn-answer" class="btn btn-primary"  ng-click="demonstrate.truecard()">answer card</div>
-       <div id="btn-clear" class="btn btn-primary" ng-click="demonstrate.resetcard()">reset-card</div>
+       <div id="btn-add" class="btn btn-primary" ng-click="cardCtrl.nextcard()">next card </div> 
+       <div id="btn-answer" class="btn btn-primary"  ng-click="cardCtrl.truecard()">answer card</div>
+       <div id="btn-clear" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
      </div>
   </div>

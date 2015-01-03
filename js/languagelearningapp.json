@@ -2,31 +2,83 @@
   "greetings" : [ 
   {
     "English" : "Hello!",
-    "Image" : "https://forums.oneplus.net/attachments/hi-there-icon-png.164495/",
-    "Tigrigna" : "Selam"
+    "Tigrigna" : "Selam",
+    "Image" : "https://forums.oneplus.net/attachments/hi-there-icon-png.164495/"
   }, {
     "English" : "kemey hadirka",
-    "Image" : "http://media1.santabanta.com/full1/Miscellaneous/Good%20Morning/good-morning-2a.jpg",
-    "Tigrigna" : "Good morning!"
+    "Tigrigna" : "Good morning!",
+    "Image" : "http://media1.santabanta.com/full1/Miscellaneous/Good%20Morning/good-morning-2a.jpg"
   }, {
     "English" : "kemey wielkum",
-    "Image" : "http://www.goodlightscraps.com/content/good-day/good-day-7.jpg",
-    "Tigrigna" : "Good day!"
+    "Tigrigna" : "Good day!",
+    "Image" : "http://www.goodlightscraps.com/content/good-day/good-day-7.jpg"
   } 
   ],
 
-  "vocabularies" : [ 
-  {
-    "English" : "father",
-    "Image" : "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSHn35Lek5nUA7zg_IS7kx3G_HKFjNWOZ19raRT1d7AGe0L3bP8",
-    "Tigrigna" : "abo"
-  },{
-    "English" : "Mr",
-    "Image" : "https://pbs.twimg.com/profile_images/2527598777/p39hqc9c1vxrvm9q7tbj.jpeg",
-    "Tigrigna" : "ato"
+  "fruits" : [ 
+   {
+    "Tigrigna" : "tufah",
+    "English" : "Apple",
+    "Image" : "http://www.trans-high.com/uploads/images/201304/01/HUANIU_APPLE01.jpg"
+   },
+   {
+    "Tigrigna" : "orange",
+    "English" : "aranshi",
+    "Image": "http://pngimg.com/upload/orange_PNG766.png"
+   },
+   {
+    "Tigrigna" : "kuk",
+    "English" : "peach",
+    "Image" : "http://peachmarketing.com/wp-content/uploads/2012/03/peachzdfgad.jpg"
+   },
+   {
+    "Tigrigna" : "weyni",
+    "English" : "grapes",
+    "Image": "http://globe-views.com/dcim/dreams/grapes/grapes-06.jpg"
+   },
+   {
+    "Tigrigna" : "banana",
+    "English" : "banana",
+    "Image" : "http://www.fairtrasa.com/wp-content/uploads/2012/08/shutterstock_99478112.jpg"
+   },
+   {
+    "Tigrigna" : "brchik",
+    "English" : "watermelon",
+    "Image": "http://www.juicing-for-health.com/wp-content/uploads/2012/06/watermelon.jpg"
    }
     ],
-
+  "bodyface" : [ 
+   {
+    "Tigrigna" : "ayni",
+    "English" : "eye",
+    "Image": "http://i.huffpost.com/gen/1515037/thumbs/o-EYES-facebook.jpg"
+    },
+   {
+    "Tigrigna" : "afncha",
+    "English" : "nose",
+    "Image": "http://www.christlikeminds.org/site/images/nose.jpg"
+   },
+   {
+    "Tigrigna" : "af",
+    "English" : "mouth",
+    "Image" : "http://i.telegraph.co.uk/multimedia/archive/01955/smile_1955139b.jpg"
+   },
+   {
+    "Tigrigna" : "ezni",
+    "English" : "ear",
+    "Image": "http://www.womansday.com/cm/womansday/images/Wq/9-Things-You-Didn-t-Know-About-Your-Ears-mdn.jpg"
+   },
+   {
+    "Tigrigna" : "ed",
+    "English" : "hand",
+    "Image" : "http://www.ucl.ac.uk/news/news-articles/1006/hand_pic.JPG"
+   },
+   {
+    "Tigrigna" : "egri",
+    "English" : "leg",
+    "Image": "http://pad3.whstatic.com/images/thumb/b/b5/Jump-over-Your-Own-Leg-(Leg-Jump-Dance-Move)-Step-2.jpg/670px-Jump-over-Your-Own-Leg-(Leg-Jump-Dance-Move)-Step-2.jpg"
+   }
+    ],
   "numbers":[
     {
      "Tigrigna" : "hade",
@@ -135,32 +187,75 @@
   }
   ],
   "animals": [
+  {     
+  "Tigrigna": "dumu",
+  "English":"cat ",
+  "Image": "https://www.friskies.com/Content/images/headers/cat_wet.png" 
+  },
+  {     
+  "Tigrigna": "kelbi",
+  "English":"dog ",
+  "Image": "http://cdn.phys.org/newman/gfx/news/2013/dog.jpg" 
+  },
   {"Tigrigna":"Tsatse",
-  "English":  "Ant" 
+  "English":  "Ant" ,
+  "Image": "http://animalsadda.com/wp-content/uploads/2013/06/Ants-3.jpg"
   },
   {  
   "Tigrigna":   "Nihbi",
-  "English":  "Bee"  
+  "English":  "Bee",
+  "Image": "http://adozeneggs.com/wordpress/wp-content/uploads/2010/08/bumble_bee.png"  
   },
   {  
   "Tigrigna":   "Chiru",
-  "English":  "Bird" 
+  "English":  "Bird",
+  "Image": "http://www.freegreatpicture.com/files/151/19009-cute-bird-wallpaper.jpg" 
   },
   {  
   "Tigrigna":   "Tsimbilalie",
-  "English":  "Butterfly" 
+  "English":  "Butterfly",
+  "Image": "http://www.webexhibits.org/causesofcolor/images/content/blueMorphoZ.jpg" 
   },
   {    
   "Tigrigna":   "Harmaz",
-  "English":  "Elephant" 
+  "English":  "Elephant",
+  "Image": "http://www.stevescottsite.com/elephant.jpg" 
   },
   {       
   "Tigrigna":   "Asa",
-  "English":  "Fish " 
+  "English":  "Fish ",
+  "Image": "https://beetrooted.files.wordpress.com/2012/06/colorful-fish-744-1920x1200-1.jpg" 
+  }
+  ],
+  "colors": [
+  {     
+  "Tigrigna": "semeyawi",
+  "English":"blue ",
+  "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgakptftgmZUM15trfo88YJDgd6AUYvCUhXV-83ddcOpl10hPFpSamIBA" 
   },
   {     
-  "Tigrigna": "hamema",
-  "English":"Fly " 
+  "Tigrigna": "ketelya",
+  "English":"green ",
+  "Image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyYX3t84MdzAQ2XJRGDlIqGQPcmBebw3L6BDcWM2MMZuwQIZU6" 
+  },
+  {"Tigrigna":"tsaeda",
+  "English":  "white" ,
+  "Image": "http://wallfoy.com/wp-content/uploads/2013/12/White-Color-30.jpg"
+  },
+  {  
+  "Tigrigna":   "tselim",
+  "English":  "black",
+  "Image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAMAAACZHrEMAAAAElBMVEUAAADh4eDl49ri4Njb2M/5+fhj4Ci3AAAAqUlEQVR4nO3cSQGAQBDAsD3Av2UM0P88EgVV0PXcM8R91n33EO9dZ68h9hHzT0wRU8QUMUVMEVPEFDFFTBFTxBQxRUwRU8QUMUVMEVPEFDFFTBFTxBQxRUwRU8QUMUVMEVPEFDFFTBFTxBQxRUwRU8QUMUVMEVPEFDFFTBFTxBQxRUwRU8QUMUVMEVPEFDFFTBFTxBQxRUwRU8QUMUVMEVOmxYyabk3akX0ulQad0zjerAAAAABJRU5ErkJggg=="  
+  },
+  {  
+  "Tigrigna":   "keyih",
+  "English":  "red",
+  "Image": "http://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Red.svg/120px-Red.svg.png" 
+  },
+  {  
+  "Tigrigna":   "hamedawi",
+  "English":  "brown",
+  "Image": "http://www.candlechem.com/images/D118brown.gif" 
   }
   ]
   }        

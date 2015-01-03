@@ -18,48 +18,7 @@
         myOtherModal.$promise.then(myOtherModal.show);
       };
     }) 
-    .controller('VocabularyController', function($http){
-      var vm = this;
-    }) 
-    .controller('GeneralController', function($http){
-      var vm = this;
-      $http.get('https://languagelearningapp.firebaseio.com/vocabularies.json')
-        .success(function(data){
-          vm.vocabularies = data;
-        })
-        .error(function(err){
-          console.log(err);
-        });
-    })
-    .controller('ShowController', function($http, $routeParams){
-      var vm = this;
-      var id = $routeParams.id;
-      $http.get('https://languagelearningapp.firebaseio.com/vocabularies' + id + '.json')
-        .success(function(data){
-          vm.vocabularies = data;
-        })
-        .error(function(err){
-          console.log(err);
-        })
-
-    })
-    .controller('NumberController', function($http){
-      var vm = this;
-      $http.get('https://languagelearningapp.firebaseio.com/numbers.json')
-        .success(function(data){
-          vm.numbers = data;
-        })
-        .error(function(err){
-          console.log(err);
-        });
-      $http.get('https://languagelearningapp.firebaseio.com/days.json')
-        .success(function(data){
-          vm.days = data;
-        })
-        .error(function(err){
-          console.log(err);
-        });
-    })
+    
     .controller('GreetingsController', function($http) {
       var vm = this;
       $http.get('https://languagelearningapp.firebaseio.com/greetings.json')
@@ -70,55 +29,66 @@
           console.log(err);
         });
     }) 
-    .controller('DemonstrativeController', function($http, $routeParams, $scope) {
-      var vm = this;
 
-      vm.nextcard = function(){
-        var $target = document.querySelector('#flash');
-        $target.innerHTML= "";
-        var $id = $routeParams.id;
-        var url = "https://languagelearningapp.firebaseio.com/numbers/" + $id  + "/English.json";
-        //console.log(url);
-        $http.get(url).
+    .controller('QuizController', function($http) {
+      var vm = this;
+    })
+    .controller('CardsController', function($http, $scope) {
+      var vm = this;
+      var id = 1;
+      var numData;
+      var url = "https://languagelearningapp.firebaseio.com/colors/" + 0 + "/English.json";
+      $http.get(url).
         success(function(data){
-          $scope.numbers = data;
-          console.log(data);
+          $scope.colors = data;
+          var $target = document.querySelector('#flash');
+          //$target.innerHTML= "";
           angular.element($target).append(data);
         })
-        // $http.get("https://languagelearningapp.firebaseio.com/numbers.json")
-        // .success(function(data){
-        //   vm.numbers = data;
-        //   console.log(data);
-        //   for(var i=0; i<data.length; i++){
-        //     var key = data[i].English;
-        //     for(var j=0; j<key.length; j++){
-        //       console.log(key);
-        //       angular.element($target).append(key);
-        //    }
-        //    }
-        //   })
-      };
-      vm.truecard = function(){
-        var $target = document.querySelector('#flash');
-        $target.innerText = "";
-        $http.get("https://languagelearningapp.firebaseio.com/numbers.json")
-        .success(function(data){
-          vm.numbers = data; 
-          for (var i=0; i<data.length; i++){
-            if(data[i].English) {
-              console.log(angular.element($target).append(data[i].Tigrigna));
-          }
-          
-         }
-        })
-      };
+         $http.get("https://languagelearningapp.firebaseio.com/colors.json")
+         .success(function(data){
+          console.log(data.length);
+          numData = data.length; 
+          })
+                   
+          vm.nextcard = function() {
+            console.log(numData);
+            var url = "https://languagelearningapp.firebaseio.com/colors/" + id + "/English.json";
+            if (id === numData) {
+              return null;
+            }else{
+            $http.get(url).
+              success(function(data){
+             $scope.colors = data;
+             var $target = document.querySelector('#flash');
+             $target.innerHTML= "";
+              angular.element($target).append(data);
+            })
 
-      function getRandomInt(nums){
-        var result = Math.floor((Math.random()*nums)%nums);
-        return result;
-         //console.log(result);
-      }      
-        console.log(getRandomInt(6));
-      
-    }) 
+          }
+      };
+          var url = "https://languagelearningapp.firebaseio.com/colors/" + 0 + "/Tigrigna.json";
+          $http.get(url).
+          success(function(data){
+          $scope.colors = data;
+           var $target = document.querySelector('#flash');
+          //$target.innerHTML= "";
+          angular.element($target).append(data);
+          })
+          vm.truecard = function(){
+          var url = "https://languagelearningapp.firebaseio.com/colors/" + id + "/Tigrigna.json";
+          if (id === numData) {
+            return null;
+          }else{
+            $http.get(url).
+            success(function(data){
+            $scope.colors = data; 
+            var $target = document.querySelector('#flash');
+            $target.innerHTML= "";
+            angular.element($target).append(data);
+              id++;
+            })
+           }
+          };
+        })
 }());
