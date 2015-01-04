@@ -1,14 +1,63 @@
+<h3><strong>Days</strong></h3>
 <div>
-    <div class="flip"> 
+    <div class="flip" ng-repeat="day in flip.days"> 
         <div class="cards" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped">
-            <div class="face front">
+            <div class="face back" >
                 {{day.Tigrigna}}
             </div> 
-            <div class="face back"  ng-repeat="day in vocal.days"> 
+            <div class="face front"> 
                 {{day.English}}
             </div>        
         </div> 
     </div>
 </div>
-   
-<!--  <ng-repeat="day in vocal.days"> -->
+<h3><strong>Months</strong></h3>
+<div>
+    <div class="flip" ng-repeat="month in flip.months"> 
+        <div class="cards" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped">
+            <div class="face back" >
+                {{month.Tigrigna}}
+            </div> 
+            <div class="face front"> 
+                {{month.English}}
+            </div>        
+        </div> 
+    </div>
+</div>
+<h3><strong>Animals</strong></h3>
+<div>
+    <div class="flip" ng-repeat="animal in flip.animals"> 
+        <div class="cards" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped">
+            <div class="face back" >
+                {{animal.Tigrigna}}
+            </div> 
+            <div class="face front"><img class="word-img" ng-src="{{animal.Image}}">
+            </div>        
+        </div> 
+    </div>
+</div>
+<h3><strong>Body & Face</strong></h3>
+<div>
+    <div class="flip" ng-repeat="bodyface in flip.bodyface"> 
+        <div class="cards" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped">
+            <div class="face back" >
+                {{bodyface.Tigrigna}}
+            </div> 
+            <div class="face front"> 
+                {{bodyface.English}}
+            </div>        
+        </div> 
+    </div>
+</div>
+<h3><strong>Fruits</strong></h3>
+<div>
+    <div class="flip" ng-repeat="fruit in flip.fruits"> 
+        <div class="cards" ng-class="{'flipped':isFlipped}" ng-click="isFlipped=!isFlipped">
+            <div class="face back" >
+                {{fruit.Tigrigna}}
+            </div> 
+            <div class="face front"><img class="word-img" ng-src="{{fruit.Image}}">
+            </div>         
+        </div> 
+    </div>
+</div>

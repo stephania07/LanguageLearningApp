@@ -1,19 +1,27 @@
   <div>
-    <h1>Challenge yourself</h1>
+    <!-- <h1>Challenge yourself</h1> -->
+    <h2>Colors</h2>
       <p>English to Tigrigna</p>
         <div>
-          <div id="flash">
-            <div class="question" >
-                {{color.English}}
-            </div> 
-            <div class="answer"> 
-                {{color.Tigrigna}}
-            </div>       
+          <div id="flashC">      
           </div>
         </div>
      <div class="pull-left">
        <div id="btn-add" class="btn btn-primary" ng-click="cardCtrl.nextcard()">next card </div> 
-       <div id="btn-answer" class="btn btn-primary"  ng-click="cardCtrl.truecard()">answer card</div>
+       <div id="btn-answer" class="btn btn-primary"  ng-click="cardCtrl.answercard()">answer</div>
+       <div id="btn-clear" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
+     </div>
+  </div>
+  <div>
+    <h2>Animals</h2>
+      <p>English to Tigrigna</p>
+        <div>
+          <div id="flashA">      
+          </div>
+        </div>
+     <div class="pull-left">
+       <div id="btn-add" class="btn btn-primary" ng-click="cardCtrl.nextcard()">next card </div> 
+       <div id="btn-answer" class="btn btn-primary"  ng-click="cardCtrl.answercard()">answer</div>
        <div id="btn-clear" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
      </div>
   </div>

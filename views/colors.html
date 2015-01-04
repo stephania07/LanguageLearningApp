@@ -8,16 +8,16 @@
     </tr>  
   </thead>
     <tbody>
-      <tr ng-repeat="(fruitId,  fruit) in vocal.fruits">  
-        <td>{{fruit.Tigrigna}}</td>
-        <td>{{fruit.English}}</td>
-        <td><img class="word-img" ng-src="{{fruit.Image}}"></td>
+      <tr ng-repeat="(colorId,  color) in vocal.colors">  
+        <td>{{color.Tigrigna}}</td>
+        <td>{{color.English}}</td>
+        <td><img class="word-img" ng-src="{{color.Image}}"></td>
         <td>
-        <a class="btn btn-primary" href="/#/vocabulary/fruits/{{fruitId}}">Show</a>
+          <a class="btn btn-primary" href="/#/vocabulary/colors/{{colorId}}">Show</a>
         </td>
       </tr>
     </tbody>
-        <td >
+        <td>
           <a  class="btn btn-primary" href="/#/cards/flashcards">Flash Cards</a>
         </td>
 </table>
