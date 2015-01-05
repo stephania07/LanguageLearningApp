@@ -1,6 +1,10 @@
-  <div>
-    <!-- <h1>Challenge yourself</h1> -->
-    <h2>Colors</h2>
+ <div>
+    <h1 class="text-center"><strong>Flashcards</strong></h1>
+    <table>
+    <tbody>
+    <tr>
+    <td>
+    <h3><strong>Colors</strong></h3>
       <p>English to Tigrigna</p>
         <div>
           <div id="flashC">      
@@ -8,20 +12,75 @@
         </div>
      <div class="pull-left">
        <div id="btn-add" class="btn btn-primary" ng-click="cardCtrl.nextcard()">next card </div> 
-       <div id="btn-answer" class="btn btn-primary"  ng-click="cardCtrl.answercard()">answer</div>
+       <div id="btn-answer" class="btn btn-primary"  ng-click="cardCtrl.answercard('C')">answer</div>
        <div id="btn-clear" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
      </div>
   </div>
+  </td>
+  <br><br>
+  <td class="col-md-4 col-md-offset-4">
   <div>
-    <h2>Animals</h2>
+    <h3><strong>Animals</strong></h3>
       <p>English to Tigrigna</p>
         <div>
-          <div id="flashA">      
+          <div id="flashA" >      
           </div>
         </div>
      <div class="pull-left">
-       <div id="btn-add" class="btn btn-primary" ng-click="cardCtrl.nextcard()">next card </div> 
-       <div id="btn-answer" class="btn btn-primary"  ng-click="cardCtrl.answercard()">answer</div>
-       <div id="btn-clear" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
+       <div id="btn-addA" class="btn btn-primary" ng-click="cardCtrl.nextcard()">next card </div> 
+       <div id="btn-answerA" class="btn btn-primary"  ng-click="cardCtrl.answercard('A')">answer</div>
+       <div id="btn-clearA" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
      </div>
   </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+    <h3><strong>Days & Months</strong></h3>
+      <p>English to Tigrigna</p>
+        <div>
+          <div id="flashM">      
+          </div>
+        </div>
+     <div class="pull-left">
+       <div id="btn-addM" class="btn btn-primary" ng-click="cardCtrl.nextcard()">next card </div> 
+       <div id="btn-answerM" class="btn btn-primary"  ng-click="cardCtrl.answercard('M')">answer</div>
+       <div id="btn-clearM" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
+     </div>
+  </div>
+  </td>
+  <br><br>
+  <td class="col-md-4 col-md-offset-4">
+  <div>
+    <h3><strong>Fruits</strong></h3>
+      <p>English to Tigrigna</p>
+        <div>
+          <div id="flashF" >      
+          </div>
+        </div>
+     <div class="pull-left">
+       <div id="btn-addF" class="btn btn-primary" ng-click="cardCtrl.nextcard()">next card </div> 
+       <div id="btn-answerF" class="btn btn-primary"  ng-click="cardCtrl.answercard('F')">answer</div>
+       <div id="btn-clearF" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
+     </div>
+  </div>
+  </td>
+  </tr>
+  <tr>
+    <td>
+    <h3><strong>Body & Faces</strong></h3>
+      <p>English to Tigrigna</p>
+        <div>
+          <div id="flashB">      
+          </div>
+        </div>
+     <div class="pull-left">
+       <div id="btn-addB" class="btn btn-primary" ng-click="cardCtrl.nextcard('B')">next card </div> 
+       <div id="btn-answerB" class="btn btn-primary"  ng-click="cardCtrl.answercard('B')">answer</div>
+       <div id="btn-clearB" class="btn btn-primary" ng-click="cardCtrl.resetcard()">reset-card</div>
+     </div>
+  </div>
+  </td>
+  </tr>
+  </tbody>
+  </table>
