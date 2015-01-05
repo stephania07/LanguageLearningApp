@@ -34,167 +34,39 @@
       var id = 1;
       var idB = 0, idF = 0, idM = 0, idC = 0, idA = 0; 
       var numData;
-      var $val = document.querySelector('#flashC');
-      console.log($val);
+      var $colr = document.querySelector('#flashC');
+      console.log($colr);
       var url = "https://languagelearningapp.firebaseio.com/colors/" + 0 + "/English.json";
       console.log(url);
       $http.get(url).
         success(function(data){
           $scope.colors = data;
-         // $val.innerHTML= "";
-          angular.element($val).append(data);
+          $colr.innerHTML = data;
         })
-         $http.get("https://languagelearningapp.firebaseio.com/colors.json")
-         .success(function(data){
-          console.log(data.length);
-          numData = data.length;
-          })
-                   
-          vm.nextcard = function() {
-            console.log(numData);
-            var url = "https://languagelearningapp.firebaseio.com/colors/" + id + "/English.json";
-            if (id === numData) {
-              return null;
-            }else{
-            $http.get(url).
-              success(function(data){
-             $scope.colors = data;
-            // $val.innerHTML= "";
-              angular.element($val).append(data);
-            })
-            }
-          };
-          var url = "https://languagelearningapp.firebaseio.com/colors/" + 0 + "/Tigrigna.json";
-          $http.get(url).
-          success(function(data){
-          $scope.colors = data;
-         // $val.innerHTML= "";
-          angular.element($val).append(data);
-          })
-          vm.answercard = function(){
-          var url = "https://languagelearningapp.firebaseio.com/colors/" + id + "/Tigrigna.json";
-          alert(url);
-          if (id === numData) {
-            return null;
-          }else{
-            $http.get(url)
-            .success(function(data){
-              $scope.colors = data; 
-              $val.innerHTML= "";
-             // angular.element($val).append(data);
-              id++;
-            })
-           }
-          };
-       
-        var $target = document.querySelector('#flashA');    
+         
+        var $anim = document.querySelector('#flashA');    
         var url = "https://languagelearningapp.firebaseio.com/animals/" + 0 + "/English.json";
           $http.get(url).
           success(function(data){
-          $scope.colors = data;
-          //$target.innerHTML= "";
-          angular.element($target).append(data);
+          $scope.animals = data;
+          $anim.innerHTML= data;
           })
-         $http.get("https://languagelearningapp.firebaseio.com/animals.json")
-         .success(function(data){
-          console.log(data.length);
-          numData = data.length; 
-          })
-                   
-          vm.nextcard = function() {
-            console.log(numData);
-            var url = "https://languagelearningapp.firebaseio.com/animals/" + id + "/English.json";
-            if (id === numData) {
-              return null;
-            }else{
-            $http.get(url).
-              success(function(data){
-             $scope.colors = data;
-             $target.innerHTML= "";
-              angular.element($target).append(data);
-            })
-            }
-          };
-          var url = "https://languagelearningapp.firebaseio.com/animals/" + 0 + "/Tigrigna.json";
-          $http.get(url).
-          success(function(data){
-          $scope.colors = data;
-          //$target.innerHTML= "";
-          angular.element($target).append(data);
-          })
-          vm.answercard = function(){
-          var url = "https://languagelearningapp.firebaseio.com/animals/" + id + "/Tigrigna.json";
-          alert("Animals");
-          if (id === numData) {
-            return null;
-          }else{
-            $http.get(url).
-            success(function(data){
-            $scope.colors = data; 
-            $target.innerHTML= "";
-            angular.element($target).append(data);
-              id++;
-            })
-           }
-          };
+        
           var $mon = document.querySelector('#flashM');    
           var url = "https://languagelearningapp.firebaseio.com/months/" + 0 + "/English.json";
-          $http.get(url).
-          success(function(data){
+          $http.get(url)
+          .success(function(data){
           $scope.months = data;
-          //$target.innerHTML= "";
-          angular.element($mon).append(data);
+          $mon.innerHTML= data;
           })
-         $http.get("https://languagelearningapp.firebaseio.com/months.json")
-         .success(function(data){
-          console.log(data.length);
-          numData = data.length; 
-          })
-                   
-          vm.nextcard = function() {
-            console.log(numData);
-            var url = "https://languagelearningapp.firebaseio.com/months/" + id + "/English.json";
-            if (id === numData) {
-              return null;
-            }else{
-            $http.get(url).
-              success(function(data){
-             $scope.months = data;
-             $mon.innerHTML= "";
-              angular.element($mon).append(data);
-            })
-            }
-          };
-          var url = "https://languagelearningapp.firebaseio.com/months/" + 0 + "/Tigrigna.json";
-          $http.get(url).
-          success(function(data){
-          $scope.months = data;
-          //$target.innerHTML= "";
-          angular.element($mon).append(data);
-          })
-          vm.answercard = function(){
-          var url = "https://languagelearningapp.firebaseio.com/months/" + id + "/Tigrigna.json";
-          alert("months");
-          if (id === numData) {
-            return null;
-          }else{
-            $http.get(url).
-            success(function(data){
-            $scope.months = data; 
-            $mon.innerHTML= "";
-            angular.element($mon).append(data);
-              id++;
-            })
-           }
-          };
+         
 
           var $fruit = document.querySelector('#flashF');    
           var url = "https://languagelearningapp.firebaseio.com/fruits/" + 0 + "/English.json";
           $http.get(url).
           success(function(data){
           $scope.fruits = data;
-          //$target.innerHTML= "";
-          angular.element($fruit).append(data);
+          $fruit.innerHTML = data;
           })
          $http.get("https://languagelearningapp.firebaseio.com/fruits.json")
          .success(function(data){
@@ -202,27 +74,7 @@
           numData = data.length; 
           })
                    
-          vm.nextcard = function() {
-            console.log(numData);
-            var url = "https://languagelearningapp.firebaseio.com/fruits/" + id + "/English.json";
-            if (id === numData) {
-              return null;
-            }else{
-            $http.get(url).
-              success(function(data){
-             $scope.fruits = data;
-             $fruit.innerHTML= "";
-              angular.element($fruit).append(data);
-            })
-            }
-          };
-          var url = "https://languagelearningapp.firebaseio.com/fruits/" + 0 + "/Tigrigna.json";
-          $http.get(url).
-          success(function(data){
-          $scope.fruits = data;
-          //$target.innerHTML= "";
-          angular.element($fruit).append(data);
-          })
+          
           vm.answercard = function(){
           var url = "https://languagelearningapp.firebaseio.com/fruits/" + id + "/Tigrigna.json";
           alert("fruits")
@@ -232,8 +84,7 @@
             $http.get(url).
             success(function(data){
             $scope.fruits = data; 
-            $fruit.innerHTML= "";
-            angular.element($fruit).append(data);
+            $fruit.innerHTML= data;
               id++;
             })
            }
@@ -271,29 +122,69 @@
                 break;
               case 'F':
                 console.log("case F");
-                var url = "https://languagelearningapp.firebaseio.com/fruits/" + idF + "/Tigrigna.json";
-                $body = document.querySelector('#flashF');
+                idF++;
+                var url = "https://languagelearningapp.firebaseio.com/fruits/" + idF + "/English.json";
+                $fruit = document.querySelector('#flashF');
+                if(idF === numData) {
+                  return null;
+                }else{
+                  $http.get(url)
+                  .success(function(data){
+                    $scope.fruits = data;
+                    $fruit.innerHTML = data;
+                  })
+                }
                 break;
               case 'M':
                 console.log("case M");
-                var url = "https://languagelearningapp.firebaseio.com/months/" + idM + "/Tigrigna.json";
-                $body = document.querySelector('#flashM');
+                idM++;
+                var url = "https://languagelearningapp.firebaseio.com/months/" + idM + "/English.json";
+                var $mon = document.querySelector('#flashM');
+                if(idM === numData) {
+                  return null;
+                }else{
+                  $http.get(url)
+                  .success(function(data){
+                    $scope.months = data;
+                    $mon.innerHTML = data;
+                  })
+                }
                 break;
               case 'C':
                 console.log("case C");
-                var url = "https://languagelearningapp.firebaseio.com/colors/" + idC + "/Tigrigna.json";
-                $body = document.querySelector('#flashC');
+                idC++;
+                var url = "https://languagelearningapp.firebaseio.com/colors/" + idC + "/English.json";
+                $colr = document.querySelector('#flashC');
+                if(idC === numData) {
+                  return null;
+                }else{
+                  $http.get(url)
+                  .success(function(data){
+                    $scope.colors = data;
+                    $colr.innerHTML = data;
+                  })
+                }
                 break;
               case 'A':
                 console.log("case A");
-                var url = "https://languagelearningapp.firebaseio.com/animals/" + idA + "/Tigrigna.json";
-                $body = document.querySelector('#flashA');
+                idA++;
+                var url = "https://languagelearningapp.firebaseio.com/animals/" + idA + "/English.json";
+                $anim = document.querySelector('#flashA');
+                if(idA === numData){
+                  return null;
+                }else{
+                  $http.get(url)
+                  .success(function(data){
+                    $scope.animals = data;
+                    $anim.innerHTML = data;
+                  })
+                }
                 break;
               default:
                 console.log('default');
             }
           };
-          
+
           vm.answercard = function(topic){
             //console.log(topic);
             switch(topic){
@@ -315,22 +206,54 @@
               case 'F':
                 console.log("case F");
                 var url = "https://languagelearningapp.firebaseio.com/fruits/" + idF + "/Tigrigna.json";
-                $body = document.querySelector('#flashF');
+                $fruit = document.querySelector('#flashF');
+                if(idF === numData) {
+                  return null;
+                }else{
+                  $http.get(url)
+                  .success(function(data){
+                    $fruit.innerHTML = data;
+                  })
+                }
                 break;
               case 'M':
                 console.log("case M");
                 var url = "https://languagelearningapp.firebaseio.com/months/" + idM + "/Tigrigna.json";
-                $body = document.querySelector('#flashM');
+                var $mon = document.querySelector('#flashM');
+                if(idM === numData) {
+                  return null;
+                }else{
+                  $http.get(url)
+                  .success(function(data){
+                    $mon.innerHTML = data;
+                  })
+                }
                 break;
               case 'C':
                 console.log("case C");
                 var url = "https://languagelearningapp.firebaseio.com/colors/" + idC + "/Tigrigna.json";
-                $body = document.querySelector('#flashC');
+                $colr = document.querySelector('#flashC');
+                if(idC === numData) {
+                  return null;
+                }else{
+                  $http.get(url)
+                  .success(function(data){
+                    $colr.innerHTML = data;
+                  })
+                }
                 break;
               case 'A':
                 console.log("case A");
                 var url = "https://languagelearningapp.firebaseio.com/animals/" + idA + "/Tigrigna.json";
-                $body = document.querySelector('#flashA');
+                $anim = document.querySelector('#flashA');
+                if(idA === numData){
+                  return null;
+                }else{
+                  $http.get(url)
+                  .success(function(data){
+                    $anim.innerHTML = data;
+                  })
+                }
                 break;
               default:
                 console.log('default');
@@ -384,4 +307,33 @@
           console.log(err);
         });             
       })
+    .controller('QuizController', function($http, $scope) {
+      var vm = this;
+      $http.get("https://languagelearningapp.firebaseio.com/days.json")
+      .success(function(data){
+        vm.days = data;
+      })
+      .error(function(err){
+        console.log(err);
+      });
+      vm.submit = function(){
+      var val = document.querySelector('#submit').value;
+      var url = "https://languagelearningapp.firebaseio.com/days.json";
+       console.log(val);
+       console.log(url);
+       $scope.val = url;
+        // var urlE = "https://languagelearningapp.firebaseio.com/days/" + id + "/English.json";
+          if(val !== url) {
+               alert("wrong answer plz try again");
+          }else{
+            alert("you are correct");
+          }
+      };
+      vm.correctAnswer = function(){
+      var $target = document.querySelector('#submit');
+      var id = 0;
+      var url = "https://languagelearningapp.firebaseio.com/days.json";
+        angular.element($target).append(url);
+      };
+    })
 }());
