@@ -111,7 +111,7 @@
   "English":  "Monday" 
   },
   {  
-  "Tigrigna":   " selus",
+  "Tigrigna":   "selus",
   "English":  "Tuesday"  
   },
   {  
@@ -119,20 +119,20 @@
   "English":  "Wednesday" 
   },
   {  
-  "Tigrigna":   " Hamus",
+  "Tigrigna":   "Hamus",
   "English":  "Thursday" 
   },
   {    
-  "Tigrigna":   " Arbi",
+  "Tigrigna":   "Arbi",
   "English":  "Friday" 
   },
   {       
   "Tigrigna":   "qedam",
-  "English":  "Saturday " 
+  "English":  "Saturday" 
   },
   {     
   "Tigrigna": "senbet",
-  "English":"Sunday " 
+  "English":"Sunday" 
   }
   ],
 

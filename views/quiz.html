@@ -1,0 +1,26 @@
+<!-- <h1>General Quiz</h1>
+<p>Write its meaning in Tigrigna.</p>
+<table>
+  <tbody>
+    <tr ng-repeat="day in quiz.days track by $index">
+      <td></td>
+      <td>{{day.English}}</td>
+      <td><input type="text" id="submit"></td>
+      <td><input type="submit" class="btn btn-primary" ng-click="quiz.submit()"></td>
+      <td><input type="submit" value="?" class="btn btn-success" ng-click="quiz.correctAnswer()"></td>
+    </tr>
+   </tbody>
+</table -->
+
+<h1>Quiz</h1>
+<div ng-repeat="day in quiz.days">
+   <form name="myForm" ng-submit="quiz.submit(day.English, $index)">
+     <label>{{day.English}}</label>
+       <input type="text" name="days" id={{day.English}} ng-model="form.day" value="" />
+       <button type="submit" class="btn btn-primary">Submit</button> 
+       <button  class="btn btn-success" ng-click="quiz.correctAnswer(day.English, $index, $event)">?</button>
+   </form>
+</div>
+<br><br>
+   <label>Score</label>
+   <input name="score" />
