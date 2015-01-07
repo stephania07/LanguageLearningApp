@@ -1,23 +1,14 @@
-<h1>Contents</h1>
-<div>
-  <ul>
-    <div>
-     <div>
-      <li><a href="/#/vocabulary">Vocabulary</a></li>
-     </div>  
-      <ul>
-    	  <li><a href="/#/vocabulary/colors">Colors</a></li>
-        <li><a href="/#/vocabulary/animals">Animals</a></li>
-        <li><a href="/#/vocabulary/Days&Months">Days and Months</a></li>
-        <li><a href="/#/vocabulary/fruits">Fruits</a></li>
-    	  <li><a href="/#/vocabulary/body&face">Body and Faces</a></li>
-      </ul>
-    </div>
-      <li><a href="/#/greetings">Greetings</a></li>
-      <li><a href="/#/cards">Cards</a></li>
-      <li><a href="/#/quiz">Quiz</a></li>
-  </ul>
-</div>
-
-
- 
+  <div class="container">
+    <h1 ng-show="user"> {{user.password.email}}'s Learning progress</h1>
+    <a class="btn btn-primary" href="/#/vocabulary" ng-show="user">Vocabulary</a>
+    <a class="btn btn-primary" href="/#/greetings" ng-show="user">Greetings</a>
+    <a class="btn btn-primary" href="/#/cards" ng-show="user">Cards</a>
+    <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
+  </div>
+<table>
+  <tbody>
+      <tr ng-repeat="(alphabetId,  alphabet) in home.alphabets">  
+        <td>{{alphabet.Img}}</td>
+      </tr>
+    </tbody>
+</table>

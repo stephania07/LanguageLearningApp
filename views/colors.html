@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <th>Tigrigna</th>
+      <th>ትግርኛ</th>
       <th>English</th>
       <th>Image</th>
       <!-- <th>Show</th> -->
@@ -10,10 +11,11 @@
     <tbody>
       <tr ng-repeat="(colorId,  color) in vocal.colors">  
         <td>{{color.Tigrigna}}</td>
+        <td>{{color.Img}}</td>
         <td>{{color.English}}</td>
         <td><img class="word-img" ng-src="{{color.Image}}"></td>
         <td>
-          <a class="btn btn-primary" href="/#/vocabulary/colors/{{colorId}}">Show</a>
+          <!-- <a class="btn btn-primary" href="/#/vocabulary/colors/{{colorId}}">Show</a> -->
         </td>
       </tr>
     </tbody>

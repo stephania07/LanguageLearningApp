@@ -1,7 +1,7 @@
 ;(function(){
   'use strict';
   angular.module('languagelearningApp')
-    .controller('HomeController', function($scope, $modal){
+    .controller('HomeController', function($http, $scope, $modal){
       var vm = this;
       var myModal = $modal({
         title: "Hello {{uid}}!", 
@@ -17,6 +17,11 @@
       $scope.showModal = function() {
         myOtherModal.$promise.then(myOtherModal.show);
       };
+      var url = "https://languagelearningapp.firebaseio.com/alphabets.json";
+          $http.get(url)
+          .success(function(data){
+            $scope.alphabets = data;
+        })
     }) 
     
     .controller('GreetingsController', function($http) {
@@ -148,7 +153,7 @@
                 }
                 break;
               case 'A':
-                console.log("case A");
+                //console.log("case A");
                 idA++;
                 var url = "https://languagelearningapp.firebaseio.com/animals/" + idA + "/English.json";
                 $anim = document.querySelector('#flashA');
@@ -329,7 +334,7 @@
       })
     .controller('QuizController', function($http) {
       var vm = this;
-      vm.correctCount = 0;
+      vm.correctCount =0;
       $http.get("https://languagelearningapp.firebaseio.com/days.json")
       .success(function(data){
         vm.days = data;
@@ -337,22 +342,22 @@
       .error(function(err){
         console.log(err);
       });
-      vm.submit = function(idDays, idNum){
+      vm.submit = function(idDays, idNum, cb){
       var id = idNum;
-      vm.correctCount = 0;
       console.log(idDays);
       var val = document.querySelector('#'+idDays).value;
       var url = "https://languagelearningapp.firebaseio.com/days/" + id + "/Tigrigna.json";
           $http.get(url)
             .success(function(data){
-            countCorrectAnswer();            
+            //letters();           
             if(val !== data) {
                alert("your answer is incorret") 
            }else{
               alert("Your answer is correct");
+              vm.correctCount++;
            }     
         })
-     };
+      };
       vm.correctAnswer = function(idDays, idNum, $event){
       var id = idNum;
       var $target = document.querySelector('#'+idDays);

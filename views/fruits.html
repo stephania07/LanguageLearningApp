@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <th>Tigrigna</th>
+      <th>ትግርኛ</th>
       <th>English</th>
       <th>Image</th>
       <!-- <th>Show</th> -->
@@ -10,10 +11,11 @@
     <tbody>
       <tr ng-repeat="(fruitId,  fruit) in vocal.fruits">  
         <td>{{fruit.Tigrigna}}</td>
+        <td>{{fruit.Img}}</td>
         <td>{{fruit.English}}</td>
         <td><img class="word-img" ng-src="{{fruit.Image}}"></td>
         <td>
-        <a class="btn btn-primary" href="/#/vocabulary/fruits/{{fruitId}}">Show</a>
+        <!-- <a class="btn btn-primary" href="/#/vocabulary/fruits/{{fruitId}}">Show</a> -->
         </td>
       </tr>
     </tbody>

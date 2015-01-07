@@ -3,12 +3,14 @@
   <h3>Months</h3>
     <tr>
       <th>Tigrigna</th>
+      <th>ትግርኛ</th>
       <th>English</th>
     </tr>  
   </thead>
     <tbody>
       <tr ng-repeat="(monthId, month) in vocal.months">  
         <td>{{month.Tigrigna}}</td>
+        <td>{{month.Img}}</td>
         <td>{{month.English}}</td>
       </tr>
     </tbody>
@@ -18,12 +20,14 @@
   <thead>
     <tr>
       <th>Tigrigna</th>
+      <th>ትግርኛ</th>
       <th>English</th>
     </tr>  
   </thead>
     <tbody>
       <tr ng-repeat="(dayId, day) in vocal.days">  
         <td>{{day.Tigrigna}}</td>
+        <td>{{day.Img}}</td>
         <td>{{day.English}}</td>
       </tr>
     </tbody>

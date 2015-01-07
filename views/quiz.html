@@ -2,23 +2,24 @@
 <h3><strong>Colors</strong></h3>
 <div ng-repeat="day in quiz.days">
    <form name="myForm" ng-submit="quiz.submit(day.English, $index)">
-     <label>{{day.English}}</label>
+       <label>{{day.English}}</label>
        <input class="userInput" type="text" name="days" id={{day.English}} ng-model="form.day" value="" />
-       <button type="submit" class="btn btn-primary">Submit</button> 
+       <button type="submit" class="btn btn-primary">Submit</button>
        <button  class="btn btn-success" ng-click="quiz.correctAnswer(day.English, $index, $event)">?</button>
    </form>
 </div>
 <br>
    <label>Score</label>
-   <div>{{quiz.correctCount}}</div>
+   <div> {{quiz.correctCount}}</div>
 <br><br>
+
 <!-- <h3><strong>Animals</strong></h3>
 <div ng-repeat="animal in quiz.animals">
-   <form name="myForm" ng-submit="quiz.submit(animal.English, $index)">
+   <form name="myForm" ng-submit="quiz.submitA(animal.English, $index)">
        <tr><td><img class="word-img" ng-src="{{animal.Image}}"></td></tr>
-       <input class="userText" type="text" id={{animal.English}} ng-model="form.animal" value="" />
+       <input class="userInput" type="text" id={{animal.English}} ng-model="form.animal" value="" />
        <button type="submit" class="btn btn-primary">Submit</button> 
    </form>
 </div>
    <label>Score</label>
-   <div id="animls"></div> -->
+   <!-<div>{{quiz.correctCount}}</div> --> 
