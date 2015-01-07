@@ -329,6 +329,7 @@
       })
     .controller('QuizController', function($http) {
       var vm = this;
+      vm.correctCount = 0;
       $http.get("https://languagelearningapp.firebaseio.com/days.json")
       .success(function(data){
         vm.days = data;
@@ -338,17 +339,17 @@
       });
       vm.submit = function(idDays, idNum){
       var id = idNum;
+      vm.correctCount = 0;
       console.log(idDays);
       var val = document.querySelector('#'+idDays).value;
       var url = "https://languagelearningapp.firebaseio.com/days/" + id + "/Tigrigna.json";
-        console.log(val);
-        console.log(url);
           $http.get(url)
-            .success(function(data){            
+            .success(function(data){
+            countCorrectAnswer();            
             if(val !== data) {
-               alert("wrong answer plz try again") 
+               alert("your answer is incorret") 
            }else{
-              alert("You are correct");
+              alert("Your answer is correct");
            }     
         })
      };
@@ -363,5 +364,23 @@
         })
         $event.preventDefault();
       };
-    })
+      function  countCorrectAnswer(){
+        var $inputs = $('.userInput');
+        for(var i=0; i < $inputs.length; i++) {
+           var userVal = $inputs[i].value;
+           console.log($inputs);
+           //var  = $inputs[i].id; //        
+           var url = "https://languagelearningapp.firebaseio.com/days/" + i + "/Tigrigna.json";
+           console.log(url);
+           $http.get(url)
+           .success(function(data){
+            if(userVal === data) {
+              vm.correctCount++; 
+              console.log(vm.correctCount);
+            }
+          })
+        }
+      }
+     
+    })  
 }());
