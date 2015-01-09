@@ -18,11 +18,11 @@
         });
      };
     })
-     .controller('LogoutController', function($scope, $location){
-      var ref = new Firebase("https://languagelearningapp.firebaseio.com");
-      ref.unauth(function(){
-        $location.path('/');
+    .controller('LogoutController', function($scope, $location, authFactory){
+      authFactory.logout(function(){
+        $location.path('/login');
         $scope.$apply();
-      })
-    }) 
+      });
+    })
+   
 }());

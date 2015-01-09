@@ -1,9 +1,27 @@
 ;(function(){
   'use strict';
   angular.module('languagelearningApp')
-    .factory('authFactory', function(FIREBASE_URL){
+    .factory('authFactory', function($rootScope, $location, FIREBASE_URL){
       var factory = {},
-       ref = new Firebase(FIREBASE_URL);   
+       ref = new Firebase(FIREBASE_URL); 
+
+    $rootScope.user = ref.getAuth();
+
+    factory.requireLogin = function(){
+      if(!_isLoggedIn()){
+        $location.path('/login');
+      }
+    }
+
+    factory.disallowLogin = function(){
+      if(_isLoggedIn()){
+        $location.path('/home');
+      }
+    };
+    function _isLoggedIn(){
+      return Boolean(ref.getAuth());
+    } 
+
     factory.login = function(email, pass, cb){
      ref.authWithPassword({
        email    : email,
@@ -17,6 +35,13 @@
        } 
       });
     };
+    factory.logout = function(cb){
+        ref.unauth(function(){
+          $rootScope.user = null;
+          cb();
+        });
+      };
+    
     factory.register = function(email, pass, cb){
       ref.createUser({
         email    : email,
