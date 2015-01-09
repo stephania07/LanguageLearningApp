@@ -1,27 +1,35 @@
 ;(function(){
   'use strict';
   angular.module('languagelearningApp')
-    .controller('HomeController', function($http, $scope, $modal){
+    .controller('CarouselDemoCtrl', function ($http, $scope) {
       var vm = this;
-      var myModal = $modal({
-        title: "Hello {{uid}}!", 
-        content: 'Welcome to 60min Language Learning!', 
-        show: true
-      });
-      var myOtherModal = $modal({
-        scope: $scope,
-        template: '/#/home', 
-        show: false
-      });
-      // Show when some event occurs (use $promise property to ensure the template has been loaded)
-      $scope.showModal = function() {
-        myOtherModal.$promise.then(myOtherModal.show);
-      };
-      var url = "https://languagelearningapp.firebaseio.com/alphabets.json";
-          $http.get(url)
-          .success(function(data){
-            $scope.alphabets = data;
-        })
+      $http.get('https://languagelearningapp.firebaseio.com/slides.json')
+        .success(function(data){
+          $scope.myInterval = 2000;
+          vm.slides = data;  
+        })       
+    })     
+    .controller('HomeController', function($http, $scope, $modal){
+      // // var vm = this;
+      // // var myModal = $modal({
+      // //   title: "Hello user!", 
+      // //   content: 'Welcome to 60min Language Learning!', 
+      // //   show: true
+      // // });
+      // // var myOtherModal = $modal({
+      // //   scope: $scope,
+      // //   template: '/#/home', 
+      // //   show: false
+      // // });
+      // // Show when some event occurs (use $promise property to ensure the template has been loaded)
+      // $scope.showModal = function() {
+      //   myOtherModal.$promise.then(myOtherModal.show);
+      // };
+      // var url = "https://languagelearningapp.firebaseio.com/alphabets.json";
+      //     $http.get(url)
+      //     .success(function(data){
+      //       $scope.alphabets = data;
+      //   })
     }) 
     
     .controller('GreetingsController', function($http) {
@@ -83,12 +91,7 @@
             $scope.bodyface = data;
            $body.innerHTML = data;
           })
-         // $http.get("https://languagelearningapp.firebaseio.com/bodyface.json")
-         // .success(function(data){
-         //  console.log(data.length);
-         //  numData = data.length; 
-         //  })
-                   
+                            
           vm.nextcard = function(topic) {
             switch(topic){
               case 'B':
@@ -173,7 +176,6 @@
           };
 
           vm.answercard = function(topic){
-            //console.log(topic);
             switch(topic){
               case 'B':
                 console.log("case B");
@@ -332,8 +334,9 @@
           console.log(err);
         });             
       })
-    .controller('QuizController', function($http) {
+    .controller('QuizController', function($http, $scope) {
       var vm = this;
+      vm.countRightAnswer = 0;
       vm.correctCount =0;
       $http.get("https://languagelearningapp.firebaseio.com/days.json")
       .success(function(data){
@@ -347,9 +350,9 @@
       console.log(idDays);
       var val = document.querySelector('#'+idDays).value;
       var url = "https://languagelearningapp.firebaseio.com/days/" + id + "/Tigrigna.json";
+          //letters(); 
           $http.get(url)
-            .success(function(data){
-            //letters();           
+            .success(function(data){          
             if(val !== data) {
                alert("your answer is incorret") 
            }else{

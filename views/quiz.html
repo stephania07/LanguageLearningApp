@@ -1,5 +1,20 @@
+<div class="container">
+    <h1 ng-show="user"> {{user.password.email}}'s Learning progress</h1>
+    <a class="btn btn-primary" href="/#/vocabulary" ng-show="user">Vocabulary</a>
+    <a class="btn btn-primary" href="/#/greetings" ng-show="user">Greetings</a>
+    <a class="btn btn-primary" href="/#/cards" ng-show="user">Cards</a>
+    <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
+  </div>
 <h1 class="text-center"><strong>Quiz</strong></h1>
+<div>
+<tr>
+      <td><a class="btn btn-primary" href="/#/quiz">Colors</a></td>
+      <td><a class="btn btn-primary" href="/#/quiz">Animals</a></td>
+</tr>
+</div>
+
 <h3><strong>Colors</strong></h3>
+<p>write its translation in Tigrigna</p>
 <div ng-repeat="day in quiz.days">
    <form name="myForm" ng-submit="quiz.submit(day.English, $index)">
        <label>{{day.English}}</label>

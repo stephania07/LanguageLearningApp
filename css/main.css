@@ -5,6 +5,10 @@ body {
     font-family: "Raleway", Helvetica, sans-serif;
     font-weight: 300;
 }
+.text-justify{
+    margin-top: 60px;
+}
+
 .form-horizontal {
   margin-top: 100px; 
 
@@ -23,6 +27,18 @@ body {
     width: 250px;
     background-color: #CCC;
     border : 1px black solid;
+}
+#slides {
+  width: 1200px;
+  top:50px;
+  margin-left:20px;
+  max-height: 200px;
+  
+}
+img {
+  margin:auto;
+  width: 200px;
+  height: 150px
 }
 .word-img {
 	border-radius: 50%;
