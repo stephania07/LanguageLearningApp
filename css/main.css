@@ -1,24 +1,62 @@
 body {
 	background-image: url(../images/crossword.png);
-	max-width: 900px;
     font-size: 20px;
-    font-family: "Raleway", Helvetica, sans-serif;
+    font-family:'Raleway', sans-serif;
     font-weight: 300;
+
 }
 .text-justify{
     margin-top: 60px;
+    margin-left: 80px;
+    margin-right: 80px;
+    color: #939598;
 }
 
 .form-horizontal {
   margin-top: 100px; 
 
 }
-.btn-default,
-.btn-danger {
-	float: right;
+header {
+    background-color: #BAE241;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    z-index: 100;
 }
+header nav {
+    float: right;
+}
+header h3 {
+    margin-top: 0;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    
+}
+footer {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;  
+    z-index: 100;
+    color: #ccc;
+    text-align: center;
+    background-color: #BAE241;
+    padding: 15px;
+    font-size: 0.8em;
+}
+
+
 .log {
     margin-left: 200px;
+}
+#flashcard {
+    color: #939598;
+    margin-right: 50px;
+    margin-left: 50px;
+    
 }
 
 #flashA, #flashC,
@@ -26,19 +64,22 @@ body {
     height: 50px;
     width: 250px;
     background-color: #CCC;
-    border : 1px black solid;
+    border : 2px #CCC solid;
+    border-radius: 5px;
+    color: #f68b1f;
+    text-align: center;
 }
+
 #slides {
-  width: 1200px;
-  top:50px;
-  margin-left:20px;
-  max-height: 200px;
-  
+  margin-bottom: 100px;
+  margin-top: 150px;
+  margin-left:80px;
+  margin-right: 80px;
 }
-img {
-  margin:auto;
-  width: 200px;
-  height: 150px
+img { 
+  width: 400px;
+  height: 150px;
+
 }
 .word-img {
 	border-radius: 50%;
@@ -78,12 +119,13 @@ img {
     background: black;
     color: white;
     cursor: pointer;
-    /*position: absolute;
-*/
 }
 .flip .cards .back {
     background: white;
     color: black;
     cursor: pointer;
     -webkit-transform: rotatex(-180deg);
+}
+#quizp {
+    margin-left: 30px;
 }

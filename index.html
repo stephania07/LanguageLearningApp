@@ -7,11 +7,9 @@
   <link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
-    <div class="container">
-    <a class="btn btn-default" href="/#/login" ng-hide="user">Login</a>
-    <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
-    <a class="btn btn-default" href="/#/register" ng-hide="user">Register</a>
+    <header ng-include="'views/includes/header.html'"></header>
     <div ng-view></div>
+    <footer ng-include="'views/includes/footer.html'"></footer>
     </div>
   <script src="bower_components/firebase/firebase.js"></script>
   <script src="bower_components/jquery/dist/jquery.min.js"></script>

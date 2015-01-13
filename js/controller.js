@@ -336,8 +336,8 @@
       })
     .controller('QuizController', function($http, $scope) {
       var vm = this;
-      vm.countRightAnswer = 0;
       vm.correctCount =0;
+      vm.totalQuestions;
       $http.get("https://languagelearningapp.firebaseio.com/days.json")
       .success(function(data){
         vm.days = data;
@@ -350,15 +350,16 @@
       console.log(idDays);
       var val = document.querySelector('#'+idDays).value;
       var url = "https://languagelearningapp.firebaseio.com/days/" + id + "/Tigrigna.json";
-          //letters(); 
           $http.get(url)
             .success(function(data){          
             if(val !== data) {
-               alert("your answer is incorret") 
+               alert("your answer is incorret");
            }else{
               alert("Your answer is correct");
               vm.correctCount++;
-           }     
+              vm.totalQuestions;
+              vm.getPercentage();
+           } 
         })
       };
       vm.correctAnswer = function(idDays, idNum, $event){
@@ -368,27 +369,41 @@
         $http.get(url)
         .success(function(data){
           $target.value = data;
-        //  angular.element($target).append(url);
         })
-        $event.preventDefault();
+          $event.preventDefault();
       };
-      function  countCorrectAnswer(){
-        var $inputs = $('.userInput');
-        for(var i=0; i < $inputs.length; i++) {
-           var userVal = $inputs[i].value;
-           console.log($inputs);
-           //var  = $inputs[i].id; //        
-           var url = "https://languagelearningapp.firebaseio.com/days/" + i + "/Tigrigna.json";
-           console.log(url);
-           $http.get(url)
-           .success(function(data){
-            if(userVal === data) {
-              vm.correctCount++; 
-              console.log(vm.correctCount);
-            }
-          })
-        }
-      }
-     
+      //vm.totalQuestions = function(){
+      var url = "https://languagelearningapp.firebaseio.com/days.json";
+        $http.get(url)
+        .success(function(data){
+      // var total = $(input).length;
+      // console.log(total);
+      // };
+          vm.totalQuestions = data.length;
+        
+          //console.log(totalQuestions);
+        })
+      //};
+      vm.getPercentage = function($scope){
+        //var value = Math.floor((vm.correctCount/vm.totalQuestions)*100);
+        return Math.floor((vm.correctCount/vm.totalQuestions)*100);
+      };
+      
+      $http.get("https://languagelearningapp.firebaseio.com/animals.json")
+      .success(function(data){
+        vm.animals = data;
+      })
+      .error(function(err){
+        console.log(err);
+      });
+      
+      $http.get("https://languagelearningapp.firebaseio.com/colors.json")
+      .success(function(data){
+        vm.colors = data;
+      })
+      .error(function(err){
+        console.log(err);
+      });
+      
     })  
 }());

@@ -8,12 +8,12 @@
 <h1 class="text-center"><strong>Quiz</strong></h1>
 <div>
 <tr>
-      <td><a class="btn btn-primary" href="/#/quiz">Colors</a></td>
+      <td><a class="btn btn-primary" href="/#/quiz">Days&Months</a></td>
       <td><a class="btn btn-primary" href="/#/quiz">Animals</a></td>
 </tr>
 </div>
-
-<h3><strong>Colors</strong></h3>
+<div id="quizp">
+<h3><strong>Days</strong></h3>
 <p>write its translation in Tigrigna</p>
 <div ng-repeat="day in quiz.days">
    <form name="myForm" ng-submit="quiz.submit(day.English, $index)">
