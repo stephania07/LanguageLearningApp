@@ -6,16 +6,44 @@ body {
 
 }
 .text-justify{
-    margin-top: 60px;
+    margin-top: -5em;
     margin-left: 80px;
     margin-right: 80px;
     color: #939598;
+    
+}
+
+#slides {
+  margin-bottom: 100px;
+  margin-top: 60px;
+  position: relative;
+  text-align: center;
+  background: #222222;
+  border: 3px solid #ffffff;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  max-width: 1600px; 
+}
+
+img { 
+  width: 700px;
+  height: 250px;
+
+}
+.word-img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+.pull-left {
+    float: left;
 }
 
 .form-horizontal {
   margin-top: 100px; 
 
 }
+/*Header*/
 header {
     background-color: #BAE241;
     height: 60px;
@@ -35,6 +63,7 @@ header h3 {
     text-decoration: none;
     
 }
+/*footer*/
 footer {
     height: 50px;
     width: 100%;
@@ -47,8 +76,7 @@ footer {
     padding: 15px;
     font-size: 0.8em;
 }
-
-
+/*flashcards*/
 .log {
     margin-left: 200px;
 }
@@ -70,25 +98,7 @@ footer {
     text-align: center;
 }
 
-#slides {
-  margin-bottom: 100px;
-  margin-top: 150px;
-  margin-left:80px;
-  margin-right: 80px;
-}
-img { 
-  width: 400px;
-  height: 150px;
-
-}
-.word-img {
-	border-radius: 50%;
-	height: 60px;
-	width: 60px;
-}
-.pull-left {
-	float: left;
-}
+/*Flip cards*/
 .flip {
 	width: 150px;
     height: 80px;
@@ -96,6 +106,9 @@ img {
     padding: 2px;
     margin: 50px auto;
     max-width: 50%;
+}
+
+   
 }
 .flip .cards.flipped {
 	-webkit-transform: rotatex(-180deg);

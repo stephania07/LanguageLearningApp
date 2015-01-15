@@ -9,27 +9,8 @@
           vm.slides = data;  
         })       
     })     
-    .controller('HomeController', function($http, $scope, $modal){
-      // // var vm = this;
-      // // var myModal = $modal({
-      // //   title: "Hello user!", 
-      // //   content: 'Welcome to 60min Language Learning!', 
-      // //   show: true
-      // // });
-      // // var myOtherModal = $modal({
-      // //   scope: $scope,
-      // //   template: '/#/home', 
-      // //   show: false
-      // // });
-      // // Show when some event occurs (use $promise property to ensure the template has been loaded)
-      // $scope.showModal = function() {
-      //   myOtherModal.$promise.then(myOtherModal.show);
-      // };
-      // var url = "https://languagelearningapp.firebaseio.com/alphabets.json";
-      //     $http.get(url)
-      //     .success(function(data){
-      //       $scope.alphabets = data;
-      //   })
+    .controller('HomeController', function(){
+      
     }) 
     
     .controller('GreetingsController', function($http) {
@@ -338,6 +319,7 @@
       var vm = this;
       vm.correctCount =0;
       vm.totalQuestions;
+      vm.totalRightAnswers =0;
       $http.get("https://languagelearningapp.firebaseio.com/days.json")
       .success(function(data){
         vm.days = data;
@@ -347,6 +329,7 @@
       });
       vm.submit = function(idDays, idNum, cb){
       var id = idNum;
+      console.log(id);
       console.log(idDays);
       var val = document.querySelector('#'+idDays).value;
       var url = "https://languagelearningapp.firebaseio.com/days/" + id + "/Tigrigna.json";
@@ -372,30 +355,42 @@
         })
           $event.preventDefault();
       };
-      //vm.totalQuestions = function(){
       var url = "https://languagelearningapp.firebaseio.com/days.json";
         $http.get(url)
         .success(function(data){
-      // var total = $(input).length;
-      // console.log(total);
-      // };
           vm.totalQuestions = data.length;
-        
-          //console.log(totalQuestions);
         })
-      //};
-      vm.getPercentage = function($scope){
-        //var value = Math.floor((vm.correctCount/vm.totalQuestions)*100);
+      vm.getPercentage = function(){
         return Math.floor((vm.correctCount/vm.totalQuestions)*100);
       };
       
       $http.get("https://languagelearningapp.firebaseio.com/animals.json")
       .success(function(data){
         vm.animals = data;
+        console.log(data);
       })
       .error(function(err){
         console.log(err);
       });
+      vm.check = function(idAnimals,idNum, cb){
+      var id = idNum;
+      console.log(id);
+      console.log(idAnimals);
+      var userInput = document.querySelector('#' + idAnimals).value;
+      console.log(userInput);
+      var url = "https://languagelearningapp.firebaseio.com/animals/" + id + "/Tigrigna.json";
+      console.log(url);
+        $http.get(url)
+        .success(function(data){  
+          console.log(data);        
+          if(userInput !== data) {
+            alert('Incorrect');
+          }else{
+            alert('Correct');
+            vm.totalRightAnswers++;
+          }
+        })
+        };
       
       $http.get("https://languagelearningapp.firebaseio.com/colors.json")
       .success(function(data){
