@@ -26,16 +26,120 @@
 </div>
 <br>
    <label>Score</label>
-   <div> {{quiz.correctCount}}</div>
-<br><br>
+   <div>{{quiz.correctCount}}/{{quiz.totalQuestions}}</div>
+   <progressbar value="dynamic" max="max" ><b style="color:black" class="btn-success">  {{quiz.getPercentage()}}%</b></progressbar>
+<br><hr/>
 
-<!-- <h3><strong>Animals</strong></h3>
+<h3><strong>Animals</strong></h3>
+<p>Select the correct answer in Tigrigna</p>
 <div ng-repeat="animal in quiz.animals">
-   <form name="myForm" ng-submit="quiz.submitA(animal.English, $index)">
-       <tr><td><img class="word-img" ng-src="{{animal.Image}}"></td></tr>
-       <input class="userInput" type="text" id={{animal.English}} ng-model="form.animal" value="" />
-       <button type="submit" class="btn btn-primary">Submit</button> 
+   <form name="myFormA"  ng-submit="quiz.check(animal.English, $index, $event)">
+     <label>ኣነ ይፈቱ / I like </label>
+       <tr><td><img class="word-img" ng-src="{{animal.Image}}"></td></tr> 
+       <select ng-model="form.animal" id={{animal.English}}>
+          <option value="{{animal.Tigrigna}}" ng-repeat="animal in quiz.animals">
+          {{animal.Tigrigna}}
+          </option>
+       </select> 
+        <button class="btn btn-primary" type="submit">Check</button>
    </form>
 </div>
-   <label>Score</label>
-   <!-<div>{{quiz.correctCount}}</div> --> 
+   <div> {{quiz.totalRightAnswers}}</div>
+
+
+<h3><strong>Colors</strong></h3>
+<p>Match by dragging to the right spot</p>
+<div id="main">
+<div id="colorDiv">
+<div ng-repeat="color in quiz.colors">
+<label>{{color.Tigrigna}}</label>
+   <!-- <div name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
+       <tr><td><img class="word-img" ng-src="{{color.Image}}"></td></tr> 
+        <input ng-model="form.color" id={{color.Tigrigna}}/>
+       
+   </div> -->
+</div>
+</div>
+
+<div id="dropbox" drop-target="true">
+  <div style="border-bottom: 2px solid black"></div>
+  <div ng-repeat="color in quiz.colors">
+
+  <div class="colorp"><img class="word-img" ng-src="{{color.Image}}">
+  
+    </div> 
+    </div>
+</div>
+</div>
+<button class="btn btn-inf btn-lg" type="submit">Check</button>
+   <div> {{quiz.countRightColor}}</div>
+
+<!-- <div id="main">
+<div id="colorsDiv"  style="border-bottom: 2px solid black" left="222px">
+  <div ng-repeat="color in quiz.colors">
+   usage of the Draggable directive -->
+    <!-- <div draggable="true"><img class="word-img" ng-src="{{color.Image}}">
+    </div>           
+ </div>  
+</div>
+<div id="dropbox" drop-target="true">
+  <div style="border-bottom: 2px solid black"></div>
+  <div ng-repeat="color in dropped">
+  <div class="colorp"><img class="word-img" ng-src="{{color.Image}}">
+    </div> 
+    </div>
+</div>
+</div>
+<div ng-repeat="color in quiz.colors">
+      <label>{{color.Tigrigna}}</label>
+    </div> -->
+ 
+<!-- 
+
+<div id="main" ng-controller="MainController">
+        <div id="items">
+            <div style="border-bottom: 2px solid black">
+                <b>Items</b> <button ng-click="showItmesLeft()">count</button>
+            </div>
+            <div ng-repeat="item in items">
+                usage of the Draggable directive -->
+                <!-- <div dd-draggable="true" class="item" itemid="{{item.id}}">{{item.id}}. {{item.name}}</div>
+            </div>
+        </div>
+         usage of the DropTarget directive -->
+        <!-- div id="dropbox" dd-drop-target="true">
+            <div style="border-bottom: 2px solid black">
+                <b>Dropbox</b> <button ng-click="showItmesDropped()">count</button>
+            </div>
+            <div ng-repeat="item in dropped">
+                <div class="item">{{item.id}}. {{item.name}}</div>
+            </div>
+        </div> -->
+    <!-- </div>--> 
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+<div ng-repeat="color in quiz.colors">
+   <form name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
+       <tr><td><img class="word-img" ng-src="{{color.Image}}"></td></tr> 
+       <input ng-model="form.color" id={{color.Tigrigna}}/>
+       <label>{{color.English}}</label>
+   </form>
+</div>
+<button class="btn btn-inf btn-lg" type="submit">Check</button>
+   <div> {{quiz.countRightColor}}</div>
+
+
+    -->

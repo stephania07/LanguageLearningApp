@@ -30,14 +30,7 @@ img {
   height: 250px;
 
 }
-.word-img {
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-}
-.pull-left {
-    float: left;
-}
+
 
 .form-horizontal {
   margin-top: 100px; 
@@ -77,6 +70,9 @@ footer {
     font-size: 0.8em;
 }
 /*flashcards*/
+#ctrlbtn {
+    float: right;
+}
 .log {
     margin-left: 200px;
 }
@@ -97,20 +93,28 @@ footer {
     color: #f68b1f;
     text-align: center;
 }
+.pull-left {
+    float: left;
+}
 
 /*Flip cards*/
+.word-img {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
 .flip {
 	width: 150px;
     height: 80px;
     display: inline-block;
     padding: 2px;
-    margin: 50px auto;
+    margin: 0 100px, auto;
     max-width: 50%;
-}
+}  
 
-   
-}
-.flip .cards.flipped {
+.flip .cards.flipped 
+{
 	-webkit-transform: rotatex(-180deg);
 }
 .flip .cards {
@@ -132,6 +136,7 @@ footer {
     background: black;
     color: white;
     cursor: pointer;
+    border-top-right-radius: 20%;
 }
 .flip .cards .back {
     background: white;
@@ -142,3 +147,40 @@ footer {
 #quizp {
     margin-left: 30px;
 }
+/*Quiz colors*/
+#main {
+    width:600px;
+    height:200px;
+    position:relative;
+}
+#dropbox {
+            position: absolute;
+            width: 500px;
+            min-height: 200px;
+            border: 2px solid black;
+}
+#colorDiv {
+            position: absolute;
+            width: 120px;
+            min-height: 200px;
+            border: 2px solid black;
+            margin: 3px;
+            margin-top: 10px;
+}
+ div.colorp {
+            float: left;
+            min-width: 160px;
+            min-height: 80px;
+            border: 2px solid green;
+            margin: 3px;
+            margin-top: 10px;
+            cursor: pointer;
+            /*font-weight: bold;*/
+}
+#colorDiv {
+    left: 350px;
+}
+#dropbox {
+        /*left: 424px;
+}
+*/
