@@ -405,6 +405,26 @@
       .error(function(err){
         console.log(err);
       });
-      
-    })  
+    })
+      .controller("SearchController", function($http, $scope){
+      var vm = this;
+      var url = "https://languagelearningapp.firebaseio.com/myData/animals.json";
+      console.log(url);
+      $http.get(url)
+      .success(function(data){
+        vm.animals = data;
+        console.log(data);
+        vm.results =[];
+        vm.findValue = function(enteredValue) {
+          angular.forEach($scope.myData, function(value, key){
+            console.log($scope.myData);
+            if(key === enteredValue){
+              console.log(key);
+              $scope.results.push({Englsih: key, Tigrigna: value[0].Tigrigna});
+            }
+          });
+        };
+    }) 
+   
+  }) 
 }());

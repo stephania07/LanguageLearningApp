@@ -183,6 +183,14 @@ footer {
 #colorDiv {
     left: 350px;
 }
+ul li img {
+    height:20px;
+    widows: 10px;
+}
+#colorImg td{
+    height: 50px;
+    width: 50px;
+}
 #dropbox {
         /*left: 424px;
 }

@@ -1,0 +1,46 @@
+<div class="container">
+<br><br>
+    <div id="ctrlbtn">
+    <a  class="btn btn-default" href="/#/vocabulary/home">back</a>
+    <a  class="btn btn-default" href="/#/vocabulary/colors">next</a>
+  </div>
+  <!-- <br><br>
+    <h1 ng-show="user"> {{user.password.email}}'s Learning progress</h1>
+    <a class="btn btn-primary" href="/#/vocabulary" ng-show="user">Vocabulary</a>
+    <a class="btn btn-primary" href="/#/greetings" ng-show="user">Greetings</a>
+    <a class="btn btn-primary" href="/#/cards" ng-show="user">Cards</a>
+    <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
+  </div>
+ <br>-->
+<div>
+    <h4><strong> <a class="btn btn-primary" href="/#/home">Vocabulary </a></strong></h4>
+    <tr>
+      <td><a class="btn btn-primary" href="/#/vocabulary/colors">Colors</a></td>
+      <td><a class="btn btn-primary" href="/#/vocabulary/animals">Animals</a></td>
+      <td><a class="btn btn-primary" href="/#/vocabulary/Days&Months">Days&Months</a></td>
+      <td><a class="btn btn-primary" href="/#/vocabulary/fruits">Fruits</a></td>
+      <td><a class="btn btn-primary" href="/#/vocabulary/body&face">Body&Face</a></td>
+    </tr>
+ </div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Tigrigna</th>
+      <th>ትግርኛ</th>
+      <th>English</th>
+      <th>Image</th>
+      <!-- <th>Show</th> -->
+    </tr>  
+  </thead>
+    <tbody>
+      <tr ng-repeat="(colorId,  color) in vocal.colors">  
+        <td>{{color.Tigrigna}}</td>
+        <td>{{color.Img}}</td>
+        <td>{{color.English}}</td>
+        <td><img class="word-img" ng-src="{{color.Image}}"></td>
+      </tr>
+    </tbody>
+        <td>
+          <a  class="btn btn-primary" href="/#/cards/flashcards">Flash Cards</a>
+        </td>
+</table>
