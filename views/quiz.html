@@ -1,16 +1,19 @@
 <div class="container">
 <br><br>
+    <div id="ctrlbtn">
+      <a  class="btn btn-default" href="/#/cards">back</a>
+      <a  class="btn btn-default" href="/#/quiz/quiz1">next</a>
+    </div>
+<div>
+<br><br>
     <h1 ng-show="user"> {{user.password.email}}'s Learning progress</h1>
-    <a class="btn btn-primary" href="/#/vocabulary" ng-show="user">Vocabulary</a>
-    <a class="btn btn-primary" href="/#/greetings" ng-show="user">Greetings</a>
-    <a class="btn btn-primary" href="/#/cards" ng-show="user">Cards</a>
     <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
   </div>
-<h1 class="text-center"><strong>Quiz</strong></h1>
 <div>
 <tr>
-      <td><a class="btn btn-primary" href="/#/quiz">Days&Months</a></td>
-      <td><a class="btn btn-primary" href="/#/quiz">Animals</a></td>
+      <td><a class="btn btn-primary" href="/#/quiz/quiz1">Qiuz1</a></td>
+      <td><a class="btn btn-primary" href="/#/quiz/quiz2">Quiz2</a></td>
+      <td><a class="btn btn-primary" href="/#/quiz/quiz3">Quiz3</a></td>
 </tr>
 </div>
 <div id="quizp">
@@ -27,95 +30,9 @@
 <br>
    <label>Score</label>
    <div>{{quiz.correctCount}}/{{quiz.totalQuestions}}</div>
-   <progressbar value="dynamic" max="max" ><b style="color:black" class="btn-success">  {{quiz.getPercentage()}}%</b></progressbar>
-<br><hr/>
-
-<h3><strong>Animals</strong></h3>
-<p>Select the correct answer in Tigrigna</p>
-<div ng-repeat="animal in quiz.animals">
-   <form name="myFormA"  ng-submit="quiz.check(animal.English, $index, $event)">
-     <label>ኣነ ይፈቱ / I like </label>
-       <tr><td><img class="word-img" ng-src="{{animal.Image}}"></td></tr> 
-       <select ng-model="form.animal" id={{animal.English}}>
-          <option value="{{animal.Tigrigna}}" ng-repeat="animal in quiz.animals">
-          {{animal.Tigrigna}}
-          </option>
-       </select> 
-        <button class="btn btn-primary" type="submit">Check</button>
-   </form>
+   <progressbar class="progress-striped" value="quiz.getPercentage()" type="success">{{quiz.getPercentage()}}%</progressbar>
 </div>
-   <div> {{quiz.totalRightAnswers}}</div>
-
-
-<h3><strong>Colors</strong></h3>
-<p>Match by dragging to the right spot</p>
-<div id="main">
-<div id="colorDiv">
-<div ng-repeat="color in quiz.colors">
-<label>{{color.Tigrigna}}</label>
-   <!-- <div name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
-       <tr><td><img class="word-img" ng-src="{{color.Image}}"></td></tr> 
-        <input ng-model="form.color" id={{color.Tigrigna}}/>
-       
-   </div> -->
-</div>
-</div>
-
-<div id="dropbox" drop-target="true">
-  <div style="border-bottom: 2px solid black"></div>
-  <div ng-repeat="color in quiz.colors">
-
-  <div class="colorp"><img class="word-img" ng-src="{{color.Image}}">
-  
-    </div> 
-    </div>
-</div>
-</div>
-<button class="btn btn-inf btn-lg" type="submit">Check</button>
-   <div> {{quiz.countRightColor}}</div>
-
-<!-- <div id="main">
-<div id="colorsDiv"  style="border-bottom: 2px solid black" left="222px">
-  <div ng-repeat="color in quiz.colors">
-   usage of the Draggable directive -->
-    <!-- <div draggable="true"><img class="word-img" ng-src="{{color.Image}}">
-    </div>           
- </div>  
-</div>
-<div id="dropbox" drop-target="true">
-  <div style="border-bottom: 2px solid black"></div>
-  <div ng-repeat="color in dropped">
-  <div class="colorp"><img class="word-img" ng-src="{{color.Image}}">
-    </div> 
-    </div>
-</div>
-</div>
-<div ng-repeat="color in quiz.colors">
-      <label>{{color.Tigrigna}}</label>
-    </div> -->
- 
-<!-- 
-
-<div id="main" ng-controller="MainController">
-        <div id="items">
-            <div style="border-bottom: 2px solid black">
-                <b>Items</b> <button ng-click="showItmesLeft()">count</button>
-            </div>
-            <div ng-repeat="item in items">
-                usage of the Draggable directive -->
-                <!-- <div dd-draggable="true" class="item" itemid="{{item.id}}">{{item.id}}. {{item.name}}</div>
-            </div>
-        </div>
-         usage of the DropTarget directive -->
-        <!-- div id="dropbox" dd-drop-target="true">
-            <div style="border-bottom: 2px solid black">
-                <b>Dropbox</b> <button ng-click="showItmesDropped()">count</button>
-            </div>
-            <div ng-repeat="item in dropped">
-                <div class="item">{{item.id}}. {{item.name}}</div>
-            </div>
-        </div> -->
-    <!-- </div>--> 
+   
 
 
 
@@ -127,19 +44,3 @@
 
 
 
-<!-- 
-
-
-
-<div ng-repeat="color in quiz.colors">
-   <form name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
-       <tr><td><img class="word-img" ng-src="{{color.Image}}"></td></tr> 
-       <input ng-model="form.color" id={{color.Tigrigna}}/>
-       <label>{{color.English}}</label>
-   </form>
-</div>
-<button class="btn btn-inf btn-lg" type="submit">Check</button>
-   <div> {{quiz.countRightColor}}</div>
-
-
-    -->

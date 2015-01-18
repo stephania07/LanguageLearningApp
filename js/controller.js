@@ -23,9 +23,9 @@
           console.log(err);
         });
     }) 
-    .controller('CardsNavigateController', function(){
+    // .controller('CardsNavigateController', function(){
 
-    })
+    // })
     .controller('CardsController', function($http, $scope) {
       var vm = this;
       var id = 1;
@@ -358,10 +358,14 @@
       var url = "https://languagelearningapp.firebaseio.com/days.json";
         $http.get(url)
         .success(function(data){
+          console.log(data);
           vm.totalQuestions = data.length;
         })
       vm.getPercentage = function(){
         return Math.floor((vm.correctCount/vm.totalQuestions)*100);
+      };
+      vm.getPercentageA = function(){
+        return Math.floor((vm.totalRightAnswers/vm.totalQuestions)*100);
       };
       
       $http.get("https://languagelearningapp.firebaseio.com/animals.json")
@@ -388,6 +392,8 @@
           }else{
             alert('Correct');
             vm.totalRightAnswers++;
+            vm.totalQuestions;
+            vm.getPercentageA();
           }
         })
         };
