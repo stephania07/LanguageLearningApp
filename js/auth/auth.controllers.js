@@ -3,8 +3,9 @@
   angular.module('languagelearningApp')
     .controller('LoginController', function(authFactory, $scope, $location){
      var vm = this;  
-     vm.login = function(){
-      authFactory.login(vm.email, vm.password, function(){
+     vm.login = function(){ 
+      authFactory.login(vm.email, vm.password, function($rootScope, authData){
+        $rootScope.user = authData;
          $location.path('/home');
          $scope.$apply();  
       });

@@ -40,8 +40,8 @@
 		controllerAs: 'vocal',
 		private: true
 	})
-	.when('/vocabulary/body&face', {
-		templateUrl : 'views/body&face.html',
+	.when('/vocabulary/bodyface', {
+		templateUrl : 'views/bodyface.html',
 		controller : 'VocabularyController',
 		controllerAs: 'vocal',
 		private: true

@@ -116,7 +116,7 @@ footer {
 
 .flip .cards.flipped 
 {
-	-webkit-transform: rotatex(180deg);
+	-webkit-transform: rotatex(-180deg);
 }
 .flip .cards {
 	width: 100%;
@@ -145,7 +145,7 @@ footer {
     background: white;
     color: black;
     cursor: pointer;
-    -webkit-transform: rotatex(180deg);
+    -webkit-transform: rotatex(-180deg);
 }
 #quizp {
     /*//margin-left: 30px;*/

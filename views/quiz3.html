@@ -20,8 +20,54 @@
 <h4>Match by dragging to the right spot</h4>
 <div ng-repeat="color in quiz.colors">
    <form name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
+       <div dd-draggable="true" style="height: 100px; width: 100px; display: inline-block">
+         <img class="word-img" ng-src="{{color.Image}}">
+       </div> 
+       <div ng-model="form.color" style="height: 100px; width: 100px; background-color: lightgrey; display: inline-block" dd-drop-target="true">
+       </div>
+       <span>{{color.Tigrigna}}</span>
+   </form>
+</div>
+<button class="btn btn-inf btn-lg" type="submit">Check</button>
+   <div> {{quiz.countRightColor}}</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div ng-repeat="color in quiz.colors">
+   <form name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
        <tr><td><img class="word-img" ng-src="{{color.Image}}"></td></tr> 
-       <input ng-model="form.color" id={{color.Tigrigna}}/>
+       <div ng-model="form.color" id={{color.Tigrigna}} style="height: 100px; width: 100px; background-color: lightgrey; display: inline-block"></div>
        <label>{{color.English}}</label>
    </form>
 </div>
