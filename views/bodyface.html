@@ -1,0 +1,43 @@
+<div class="container">
+<br><br>
+    <div id="ctrlbtn">
+    <a  class="btn btn-default" href="/#/vocabulary/fruits">back</a>
+    <a  class="btn btn-default" href="/#/greetings">next</a>
+  </div>
+  <div>
+    <h1><strong> <a class="btn btn-primary" href="/#/home">Vocabulary </a></strong></h1>
+    <tr>
+      <td><a class="btn btn-primary" href="/#/vocabulary/colors">Colors</a></td>
+      <td><a class="btn btn-primary" href="/#/vocabulary/animals">Animals</a></td>
+      <td><a class="btn btn-primary" href="/#/vocabulary/Days&Months">Days&Months</a></td>
+      <td><a class="btn btn-primary" href="/#/vocabulary/fruits">Fruits</a></td>
+      <td><a class="btn btn-primary" href="/#/vocabulary/bodyface">Body&Face</a></td>
+    </tr>
+ </div>
+<h3 class="text-center"><strong>Let's talk about body and face</strong></h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Tigrigna</th>
+      <th>ትግርኛ</th>
+      <th>English</th>
+      <th>Image</th>
+      <!-- <th>Show</th> -->
+    </tr>  
+  </thead>
+    <tbody>
+      <tr ng-repeat="(bodyfaceId,  bodyface) in vocal.bodyface">  
+        <td>{{bodyface.Tigrigna}}</td>
+        <td>{{bodyface.Img}}</td>
+        <td>{{bodyface.English}}</td>
+        <td><img class="word-img" ng-src="{{bodyface.Image}}"></td>
+        <td>
+        <!-- <a class="btn btn-primary" href="/#/vocabulary/bodyface/{{bodyfaceId}}">Show</a> -->
+        </td>
+      </tr>
+    </tbody>
+        <td >
+          <a  class="btn btn-primary" href="/#/cards/flashcards">Flash Cards</a>
+        </td>
+</table>
+
