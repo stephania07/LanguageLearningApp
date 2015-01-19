@@ -313,7 +313,7 @@
       var url = "https://languagelearningapp.firebaseio.com/myData.json";
           $http.get(url)
             .success(function(data){          
-            if(val !== data.days[id].Tigrigna) {
+            if(val.toLowerCase() !== data.days[id].Tigrigna.toLowerCase()) {
                alert("your answer is incorret");
            }else{
               alert("Your answer is correct");

@@ -1,7 +1,8 @@
  <navbar> 
    <h3> Language Learning</h3>
    <nav><a class="btn btn-default" href="/#/login" ng-hide="user">Login</a>
-   <a class="btn btn-danger" href="/#/logout" ng-show="user">Logout</a>
+   <a class="btn btn-danger pull-right" href="/#/logout" ng-show="user">Logout</a>
+   <h4 class="navbar-text pull-right" ng-show="user"> {{user.password.email}}</h4>
    <a class="btn btn-default" href="/#/register" ng-hide="user">Register</a>
    </nav>
 </navbar>
