@@ -1,18 +1,16 @@
 <div class="container">
+<br><br>
+<div id="ctrlbtn">
+      <a  class="btn btn-default" href="/#/quiz/quiz2">back</a>
+      <a  class="btn btn-default" href="/#/search">next</a>
+</div>
 <div>
 <br><br>
-    <h1 ng-show="user"> {{user.password.email}}'s Learning progress</h1>
     <a class="btn btn-primary" href="/#/vocabulary" ng-show="user">Vocabulary</a>
     <a class="btn btn-primary" href="/#/greetings" ng-show="user">Greetings</a>
     <a class="btn btn-primary" href="/#/cards" ng-show="user">Cards</a>
     <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
-  </div>
-<h1 class="text-center"><strong>Quiz</strong></h1>
-<div>
-<tr>
-      <td><a class="btn btn-primary" href="/#/quiz">Days&Months</a></td>
-      <td><a class="btn btn-primary" href="/#/quiz">Animals</a></td>
-</tr>
+    <a class="btn btn-primary" href="/#/home" ng-show="user">Search</a>
 </div>
 <h3>Search a word</h3>
     <input type="text" ng-model="enteredValue"/>

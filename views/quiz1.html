@@ -21,7 +21,7 @@
 <p>write its translation in Tigrigna</p>
 <div ng-repeat="day in quiz.days">
    <form name="myForm" ng-submit="quiz.submit(day.English, $index)">
-       <label>{{day.English}}</label>
+       <label class="control-label col-sm-2">{{day.English}}</label>
        <input class="userInput" type="text" name="days" id={{day.English}} ng-model="form.day" value="" />
        <button type="submit" class="btn btn-primary">Submit</button>
        <button  class="btn btn-success" ng-click="quiz.correctAnswer(day.English, $index, $event)">?</button>
