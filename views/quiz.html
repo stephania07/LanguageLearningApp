@@ -4,7 +4,7 @@
       <a  class="btn btn-default" href="/#/cards">back</a>
       <a  class="btn btn-default" href="/#/quiz/quiz1">next</a>
     </div>
-<div>
+<!-- <div>
 <br><br>
     <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
   </div>
@@ -31,7 +31,15 @@
    <div>{{quiz.correctCount}}/{{quiz.totalQuestions}}</div>
    <progressbar class="progress-striped" value="quiz.getPercentage()" type="success">{{quiz.getPercentage()}}%</progressbar>
 </div>
-   
+    -->
+ <br><br>
+  <div id="homebtn">
+    <a class="btn btn-primary disabled" href="/#/vocabulary" ng-show="user">Vocabulary</a>
+    <a class="btn btn-primary disabled" href="/#/greetings" ng-show="user">Greetings</a>
+    <a class="btn btn-primary disabled" href="/#/cards/flashcards" ng-show="user">Cards</a>
+    <a class="btn btn-primary" href="/#/quiz/quiz1" ng-show="user">Quiz</a>
+  </div>
+</div>
 
 
 

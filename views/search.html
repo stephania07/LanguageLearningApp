@@ -1,24 +1,22 @@
 <div class="container">
 <br><br>
-<div id="ctrlbtn">
-      <a  class="btn btn-default" href="/#/quiz/quiz2">back</a>
-      <a  class="btn btn-default" href="/#/search">next</a>
-</div>
-<div>
+    <div id="ctrlbtn">
+    <a  class="btn btn-default" href="/#/quiz/quiz3">back</a>
+    <!-- <a  class="btn btn-default" href="/#/">next</a> -->
+  </div>
 <br><br>
-    <a class="btn btn-primary" href="/#/vocabulary" ng-show="user">Vocabulary</a>
-    <a class="btn btn-primary" href="/#/greetings" ng-show="user">Greetings</a>
-    <a class="btn btn-primary" href="/#/cards" ng-show="user">Cards</a>
-    <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
-    <a class="btn btn-primary" href="/#/home" ng-show="user">Search</a>
-</div>
-<h3>Search a word</h3>
-    <input type="text" ng-model="enteredValue"/>
+<h3 class="text-center">You can search whatever word you have studied</h3>
+<div id="focusedInput">
+    <input  type="text" ng-model="enteredValue"/>
     <button type="button" ng-click="search.findValue(enteredValue)">Search</button>
-    <h6>Results</h6>
+    <br>
+    <h5>Results</h5>
     <ul>
       <li ng-repeat="result in search.results">
         {{result.English}}|<em><b>{{result.Tigrigna}}  
       </li>  
     </ul>
-    
+  </div>
+</div>
+    <br><br><br>
+    <h1 class="text-center"><strong>Congratulation!! You are done with level 1.</strong></h1>
