@@ -59,16 +59,16 @@
 
           var $fruit = document.querySelector('#flashF');    
           var url = "https://languagelearningapp.firebaseio.com/myData.json";
-          $http.get(url).
-          success(function(data){
+          $http.get(url)
+          .success(function(data){
             $scope.fruits = data.fruits[0].English;
             $fruit.innerHTML = data.fruits[0].English;
           })
 
           var $body = document.querySelector('#flashB');    
           var url = "https://languagelearningapp.firebaseio.com/myData.json";
-          $http.get(url).
-          success(function(data){
+          $http.get(url)
+          .success(function(data){
             $scope.bodyface = data.bodyface[0].English;
            $body.innerHTML = data.bodyface[0].English;
           })
@@ -296,6 +296,7 @@
       var vm = this;
       vm.correctCount =0;
       vm.totalQuestions;
+      vm.totalQuestionsA;
       vm.totalRightAnswers =0;
       vm.countRightColor = 0;
       $http.get("https://languagelearningapp.firebaseio.com/myData.json")
@@ -343,13 +344,14 @@
         return Math.floor((vm.correctCount/vm.totalQuestions)*100);
       };
       vm.getPercentageA = function(){
-        return Math.floor((vm.totalRightAnswers/vm.totalQuestions)*100);
+        return Math.floor((vm.totalRightAnswers/vm.totalQuestionsA)*100);
       };
       
       $http.get("https://languagelearningapp.firebaseio.com/myData.json")
       .success(function(data){
         vm.animals = data.animals;
         console.log(data.animals);
+        vm.totalQuestionsA= data.animals.length;
       })
       .error(function(err){
         console.log(err);
