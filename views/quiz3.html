@@ -10,86 +10,29 @@
   </div>
 <div>
 <tr>
-      <td><a class="btn btn-primary" href="/#/quiz/quiz1">Qiuz1</a></td>
-      <td><a class="btn btn-primary" href="/#/quiz/quiz2">Quiz2</a></td>
+      <td><a class="btn btn-primary disabled" href="/#/quiz/quiz1">Qiuz1</a></td>
+      <td><a class="btn btn-primary disabled" href="/#/quiz/quiz2">Quiz2</a></td>
       <td><a class="btn btn-primary" href="/#/quiz/quiz3">Quiz3</a></td>
 </tr>
 </div>   
 <h3><strong>colors</strong></h3>
 <h4>Match by dragging to the right spot</h4>
 
-<!-- div ng-repeat="color in quiz.colors">
-   <form name="myFormC"  ng-submit="quiz.checkColors()">
-       </div> 
-       <div style="height: 80px; width: 80px; display: inline-block; background-color:green" ><img ng-src="{{color.Image}}" id="draggable">
-       </div>
-       <div style="height: 100px; width: 100px; background-color: lightgrey; display: inline-block"  id="draggable" class="ui-widget-content">
-       </div>
-       <span>{{color.Tigrigna}}</span>
-   </form>
-</div>
-<button class="btn btn-inf btn-lg" type="submit">Check</button>
-   <div> {{quiz.countRightColor}}</div> -->
-
-
+<!--solution 1 -->
 <div ng-repeat="color in quiz.colors">
-   <form name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
-       <div dd-draggable="true" style="height: 100px; width: 100px; display: inline-block">
-         <img class="word-img" ng-src="{{color.Image}}">
-       </div> 
-       <div ng-model="form.color" style="height: 100px; width: 100px; background-color: lightgrey; display: inline-block" dd-drop-target="true">
-       </div>
-       <span>{{color.Tigrigna}}</span>
-   </form>
+ <form name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
+    <!--<div class="btn btn-primary">-->
+      <img ng-hide="!color.Image" class="word-img" ng-src="{{color.Image}}"  data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="color" jqyoui-draggable="{animate:true}">
+    <!--</div>-->
+    <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="answer1" jqyoui-droppable style="height: 100px; width: 200px; background-color: lightgrey; display: inline-block">
+      <img ng-src="{{answer1.Image}}" data-drag="false" data-jqyoui-options ng-model="answer1" jqyoui-draggable  ng-hide="!answer1.Image" class="word-img" >
+      <span>{{color.Tigrigna}}</span>
+    </div>
+    <div class="btn btn-success"></div>
+    <span>{{color.Tigrigna}}</span>
+  </form>
 </div>
-<button class="btn btn-inf btn-lg" type="submit">Check</button>
-   <div> {{quiz.countRightColor}}</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div ng-repeat="color in quiz.colors">
-   <form name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
-       <tr><td><img class="word-img" ng-src="{{color.Image}}"></td></tr> 
-       <div ng-model="form.color" id={{color.Tigrigna}} style="height: 100px; width: 100px; background-color: lightgrey; display: inline-block"></div>
-       <label>{{color.English}}</label>
-   </form>
-</div>
-<button class="btn btn-inf btn-lg" type="submit">Check</button>
-   <div> {{quiz.countRightColor}}</div>
-
-
- -->
+ 
 
 
 

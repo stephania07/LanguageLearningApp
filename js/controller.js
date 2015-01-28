@@ -38,6 +38,7 @@
           .success(function(data){
             $scope.colors = data.colors[0].English;
             $colr.innerHTML = data.colors[0].English;
+            console.log(data.colors[0].English);
         })
          
         var $anim = document.querySelector('#flashA');    
@@ -276,7 +277,7 @@
                      })
           	 }  
           };
-    })
+        })
     .controller('FlipController', function($http) {
       var vm = this;
       $http.get('https://languagelearningapp.firebaseio.com/myData.json')
@@ -372,22 +373,22 @@
           }else{
             alert('Correct');
             vm.totalRightAnswers++;
-            vm.totalQuestions;
+            vm.totalQuestionsA;
             vm.getPercentageA();
           }
         })
         };
       
       $http.get("https://languagelearningapp.firebaseio.com/myData.json")
-      .success(function(data){
+      .success(function(data, $scope){
         vm.colors = data.colors;
+        console.log(data.colors);
+        vm.Image1 = {quiz: 'Colors'};
+        vm.Image2 = {};
       })
       .error(function(err){
         console.log(err);
       });
-     // vm.check = function(){
-
-     // }
     })
       .controller("SearchController", function($http, $scope){
       var json;
