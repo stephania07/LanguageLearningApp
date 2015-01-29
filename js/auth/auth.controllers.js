@@ -21,7 +21,7 @@
     })
     .controller('LogoutController', function($scope, $location, authFactory){
       authFactory.logout(function(){
-        $location.path('/login');
+        $location.path('/');
         $scope.$apply();
       });
     })

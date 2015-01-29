@@ -20,19 +20,19 @@
 
 <!--solution 1 -->
 <div ng-repeat="color in quiz.colors">
- <form name="myFormC"  ng-submit="quiz.check(color.Tigrigna)">
+ <form name="formC"  ng-submit="quiz.check(color.Tigrigna)">
     <!--<div class="btn btn-primary">-->
-      <img ng-hide="!color.Image" class="word-img" ng-src="{{color.Image}}"  data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="color" jqyoui-draggable="{animate:true}">
+      <img ng-src="{{color.Image}}" ng-hide="!color.Image" class="word-img"  data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="color" jqyoui-draggable="{animate:true}">
     <!--</div>-->
     <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="answer1" jqyoui-droppable style="height: 100px; width: 200px; background-color: lightgrey; display: inline-block">
       <img ng-src="{{answer1.Image}}" data-drag="false" data-jqyoui-options ng-model="answer1" jqyoui-draggable  ng-hide="!answer1.Image" class="word-img" >
-      <span>{{color.Tigrigna}}</span>
+      <!-- <span>{{color.Tigrigna}}</span> -->
     </div>
-    <div class="btn btn-success"></div>
-    <span>{{color.Tigrigna}}</span>
+    <!-- <div class="btn btn-success"></div> -->  <span>{{color.Tigrigna}}</span> 
   </form>
+  
+</div> 
 </div>
- 
 
 
 
