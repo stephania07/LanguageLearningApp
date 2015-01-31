@@ -297,6 +297,7 @@
       vm.totalQuestionsA;
       vm.totalRightAnswers =0;
       vm.countRightColor = 0;
+      /*days quiz*/
       $http.get("https://languagelearningapp.firebaseio.com/myData.json")
       .success(function(data){
         vm.days = data.days;
@@ -313,7 +314,7 @@
           $http.get(url)
             .success(function(data){          
             if(val.toLowerCase() !== data.days[id].Tigrigna.toLowerCase()) {
-               alert("your answer is incorret");
+              alert("your answer is incorret");
            }else{
               alert("Your answer is correct");
               vm.correctCount++;
@@ -341,10 +342,7 @@
       vm.getPercentage = function(){
         return Math.floor((vm.correctCount/vm.totalQuestions)*100);
       };
-      vm.getPercentageA = function(){
-        return Math.floor((vm.totalRightAnswers/vm.totalQuestionsA)*100);
-      };
-      
+      /*anmials quiz*/
       $http.get("https://languagelearningapp.firebaseio.com/myData.json")
       .success(function(data){
         vm.animals = data.animals;
@@ -375,13 +373,16 @@
           }
         })
         };
-      
+      vm.getPercentageA = function(){
+        return Math.floor((vm.totalRightAnswers/vm.totalQuestionsA)*100);
+      };
+      /*colors quiz*/      
       $http.get("https://languagelearningapp.firebaseio.com/myData.json")
       .success(function(data, $scope){
         vm.colors = data.colors;
         console.log(data.colors);
-        vm.Image1 = {quiz: 'Colors'};
-        vm.Image2 = {};
+        // vm.Image1 = {quiz: 'Colors'};
+        // vm.Image2 = {};
       })
       .error(function(err){
         console.log(err);
