@@ -1,36 +1,21 @@
-<div class="container">
 <br><br>
-    <div id="ctrlbtn">
-    <a  class="btn btn-default" href="/#/home">back</a>
-    <a  class="btn btn-default" href="/#/vocabulary/colors">next</a>
-  </div>
-<div>
-    <h4><strong> <a class="btn btn-primary" href="/#/home">Vocabulary </a></strong></h4>
-    <tr>
-      <td><a class="btn btn-primary" href="/#/vocabulary/colors">Colors</a></td>
-      <td><a class="btn btn-primary disabled" href="/#/vocabulary/animals">Animals</a></td>
-      <td><a class="btn btn-primary disabled" href="/#/vocabulary/DaysMonths">Days&Months</a></td>
-      <td><a class="btn btn-primary disabled" href="/#/vocabulary/fruits">Fruits</a></td>
-      <td><a class="btn btn-primary disabled" href="/#/vocabulary/bodyface">Body&Face</a>
-      </td>
-    </tr>
+<div class="container">
+    
+    <br><br>
+    <h4 class="text-center"><strong>Click the colors tab</strong></h4>
+    <br><br>
+    <div id="homebtn">
+      <a href="/#/vocabulary/colors"><img src="images/colors.png" class="word-img">
+      <label>Colors</label></a>
+      <a><img src="images/animal.jpg" class="word-img">
+      <label>Animals</label></a>
+      <a><img src="images/daysmnth.png" class="word-img">
+      <label>Days&Months</label></a>
+      <a><img src="images/fruit.jpg" class="word-img">
+      <label>Fruits</label></a>
+      <a><img src="images/bodyface.jpg" class="word-img">
+      <label>Body&Face</label></a>
+    </div>
+    
  </div>
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>Tigrigna</th>
-      <th>ትግርኛ</th>
-      <th>English</th>
-      <th>Image</th>
-      
-    </tr>  
-  </thead>
-    <tbody>
-      <tr ng-repeat="(colorId,  color) in vocal.colors">  
-        <td>{{color.Tigrigna}}</td>
-        <td>{{color.Img}}</td>
-        <td>{{color.English}}</td>
-        <td><img class="word-img" ng-src="{{color.Image}}"></td>
-      </tr>
-    </tbody>
-</table>
+

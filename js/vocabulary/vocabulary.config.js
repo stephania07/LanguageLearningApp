@@ -47,26 +47,26 @@
 		private: true
 	})
 
-    .when('/greetings', {
-        templateUrl : 'views/greetings.html',
-        controller : 'GreetingsController',
-        controllerAs : 'greetCtrl',
-        private: true
-	})
+ //    .when('/greetings', {
+ //        templateUrl : 'views/greetings.html',
+ //        controller : 'GreetingsController',
+ //        controllerAs : 'greetCtrl',
+ //        private: true
+	// })
 
 	.when('/cards', {
         templateUrl : 'views/cards.html',
-        controller : 'CardsController',
+       // controller : 'CardsController',
         controllerAs : 'cardCtrl',
         private: true
 	})
 
-    .when('/cards/flashcards', {
-        templateUrl : 'views/flashcards.html',
-        controller : 'CardsController',
-        controllerAs : 'cardCtrl',
-        private: true
-	})
+ //    .when('/cards/flashcards', {
+ //        templateUrl : 'views/flashcards.html',
+ //        controller : 'CardsController',
+ //        controllerAs : 'cardCtrl',
+ //        private: true
+	// })
 	.when('/cards/flip', {
         templateUrl : 'views/flip.html',
         controller : 'FlipController',
@@ -104,5 +104,37 @@
 		controllerAs: 'search',
 		private: true
 	})
+
+	.when('/flashcards/FruitsCard', {
+		templateUrl: 'views/FruitsCard.html',
+		controller : 'CardsController',
+        controllerAs : 'cardCtrl',
+        private: true		
+	})
+	.when('/flashcards/AnimalsCard', {
+		templateUrl: 'views/AnimalsCard.html',
+		controller : 'CardsController',
+        controllerAs : 'cardCtrl',
+        private: true		
+	})
+	.when('/flashcards/ColorsCard', {
+		templateUrl: 'views/ColorsCard.html',
+		controller : 'CardsController',
+        controllerAs : 'cardCtrl',
+        private: true		
+	})
+	.when('/flashcards/BodyFaceCard', {
+		templateUrl: 'views/BodyFaceCard.html',
+		controller : 'CardsController',
+        controllerAs : 'cardCtrl',
+        private: true		
+	})
+	.when('/flashcards/DaysMonthsCard', {
+		templateUrl: 'views/DaysMonthsCard.html',
+		controller : 'CardsController',
+        controllerAs : 'cardCtrl',
+        private: true		
+	})
+
     })				
 }());

@@ -109,6 +109,16 @@ footer {
 .pull-left {
     float: left;
 }
+/*flashcards*/
+#clrflash {
+   padding-right: 0px;
+    padding-left: 100&nbsp;;
+    padding-left: 100px;
+    margin-left: 200px;
+    margin-right: 0px;
+    border-right-width: 100px;
+    width: 900px;
+}
 
 /*Flip cards*/
 .word-img {

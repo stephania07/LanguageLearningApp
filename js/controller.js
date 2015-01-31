@@ -23,9 +23,6 @@
           console.log(err);
         });
     }) 
-    // .controller('CardsNavigateController', function(){
-
-    // })
     .controller('CardsController', function($http, $scope) {
       var vm = this;
       var id = 1;

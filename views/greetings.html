@@ -1,0 +1,30 @@
+<div class="container">
+<br><br>
+    <div id="ctrlbtn">
+    <a  class="btn btn-default" href="/#/vocabulary/bodyface">back</a>
+    <a  class="btn btn-default" href="/#/cards">next</a>
+  </div>
+  <br>
+  <div>
+    <a class="btn btn-primary disabled" href="/#/vocabulary" ng-show="user">Vocabulary</a>
+    <a class="btn btn-primary" href="/#/greetings" ng-show="user">Greetings</a>
+    <a class="btn btn-primary disabled" href="/#/cards" ng-show="user">Cards</a>
+    <a class="btn btn-primary disabled" href="/#/quiz" ng-show="user">Quiz</a>
+  </div>
+  <h3 class="text-center"><strong>Let's talk about greetings</strong></h3>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Tigrigna</th>
+      <th>English</th>
+    </tr>  
+  </thead>
+  <tbody>
+    <tr ng-repeat="(greetingId, greeting) in greetCtrl.greetings">
+  	  <td>{{greeting.Tigrigna}}</td>
+  	  <td>{{greeting.English}}</td>
+  	</tr>
+  </tbody>
+</table>
+
+
