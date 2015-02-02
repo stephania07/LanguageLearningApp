@@ -379,14 +379,58 @@
       /*colors quiz*/      
       $http.get("https://languagelearningapp.firebaseio.com/myData.json")
       .success(function(data, $scope){
+        function shuffle(array) {
+          var currentIndex = array.length, temporaryValue, randomIndex ;
+
+          // While there remain elements to shuffle...
+          while (0 !== currentIndex) {
+
+            // Pick a remaining element...
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            // And swap it with the current element.
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+          }
+
+          return array;
+        };
         vm.colors = data.colors;
-        console.log(data.colors);
+        vm.answers = [];
+        $.extend(vm.answers, data.colors);
+        vm.answers = shuffle(vm.answers);
+        vm.responses = [];
+        vm.numbers = [];
+        for (var i = 0; i < data.colors.length; i++) {
+          vm.numbers.push(i);
+        };
+        vm.totalRightAnswersC = 0;
+        vm.totalQuestionsC = data.colors.length;
+        // console.log(data.colors);
         // vm.Image1 = {quiz: 'Colors'};
         // vm.Image2 = {};
       })
       .error(function(err){
         console.log(err);
       });
+      $scope.setColor = function(event, ui, color) {
+        vm.color = color;
+      };
+      $scope.addToResponses = function(event, ui, index) {
+        vm.responses[index] = vm.color;
+      };
+      vm.checkAnswers = function() {
+        for(var i = 0; i < vm.responses.length; i++) {
+          if (vm.responses[i].Tigrigna == vm.answers[i].Tigrigna) {
+            vm.totalRightAnswersC ++;
+          }
+        }
+      };
+      vm.getPercentageC = function() {
+         return Math.floor((vm.totalRightAnswersC/vm.totalQuestionsC)*100);
+      }
     })
       .controller("SearchController", function($http, $scope){
       var json;

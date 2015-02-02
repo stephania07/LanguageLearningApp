@@ -173,7 +173,19 @@ footer {
     /*//margin-left: 30px;*/
 }
 /*Quiz colors*/
-#main {
+
+.col-xs-1 {
+    margin-right:  10px;
+}
+
+.col-xs-1 .word-img {
+   margin-bottom: 50px;{
+}
+.row #answers {
+    width: 150px;
+    margin-bottom: 60px;
+}
+/*#main {
     width:600px;
     height:200px;
     position:relative;
@@ -212,7 +224,7 @@ ul li img {
 #colorImg td{
     height: 50px;
     width: 50px;
-}
+}*/
 /*search*/
 #focusedInput {
     margin-left: 35%;

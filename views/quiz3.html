@@ -10,22 +10,34 @@
   </div>   
   <h3><strong>colors</strong></h3>
   <h4>Match by dragging to the right spot</h4>
-    <!-- <div ng-repeat="color in quiz.colors" >
-      <label> {{color.Tigrigna}}</label> 
-    </div> -->
-    <div ng-repeat="color in quiz.colors">
-      <form name="formC"  ng-submit="quiz.dropped()">
-          <img ng-src="{{color.Image}}" ng-hide="!color.Image" class="word-img"  data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="color" jqyoui-draggable="{animate:true}">
-        <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="answer1" jqyoui-droppable style="height: 100px; width: 200px; background-color: lightgrey; display: inline-block">
-          <img ng-src="{{answer1.Image}}" data-drag="false" data-jqyoui-options ng-model="answer1" jqyoui-draggable  ng-hide="!answer1.Image" class="word-img">
+    <div class="row">
+      <div class="col-xs-1">
+        <div ng-repeat="color in quiz.colors">
+          <img ng-src="{{color.Image}}" ng-hide="!color.Image" class="word-img"  data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-model="color" jqyoui-draggable="{animate:true, onStart: 'setColor(color)'}">
         </div>
-      </form> 
-      <button class="btn btn-primary" type="submit">{{answer1.Tigrigna}}</button>
-    </div> 
+      </div>
+      <div class="col-xs-4">
+        <div ng-repeat="number in quiz.numbers">
+          <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="quiz.responses" jqyoui-droppable="{onDrop: 'addToResponses(number)', index: {{number}}}" style="height: 80px; width: 80px; background-color: lightgrey; display: inline-block">
+            <img ng-src="{{quiz.responses[number].Image}}" data-drag="false" data-jqyoui-options ng-model="quiz.responses" jqyoui-draggable  ng-hide="!quiz.responses[number].Image" class="word-img">
+          </div>
+        </div>
+      </div>
+      <div ng-repeat="answer in quiz.answers">
+        <button class="btn btn-primary">{{answer.Tigrigna}}</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-primary" ng-click="quiz.checkAnswers()">Check Answers</button>
+      </div>
+    </div>
   </div>
-    <label>Score</label>
-      <div> {{quiz.ttlCorrectAnswers}}/{{quiz.totalQuestionsC}}</div>
-        <progressbar class="progress-striped" value="quiz.getPercentageC()" type="success">{{quiz.getPercentageC()}}%</progressbar>
+    <label >Score</label>
+      <div> {{quiz.totalRightAnswersC}}/{{quiz.totalQuestionsC}}</div>
+        <progressbar class="progress-striped" value="quiz.getPercentageC()" type="success">
+          {{quiz.getPercentageC()}}%
+        </progressbar>
 
 
 
