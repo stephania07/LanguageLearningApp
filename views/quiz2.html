@@ -2,23 +2,16 @@
 <div class="container">
 <br>
     <div id="ctrlbtn">
-      <!-- <a  class="btn btn-default" href="/#/quiz/quiz1">back</a> -->
       <a  class="btn btn-success" href="/#/quiz/quiz3">continue</a>
     </div>
-<!-- <div>
-<br><br>
-    <a class="btn btn-primary" href="/#/quiz" ng-show="user">Quiz</a>
-  </div> -->
 <div>
 <tr>
-<!--       <td><a class="btn btn-primary disabled" href="/#/quiz/quiz1">Quiz1</a></td> -->
       <td><a class="btn btn-primary" href="/#/quiz/quiz2">Quiz2</a></td>
-     <!--  <td><a class="btn btn-primary disabled" href="/#/quiz/quiz3">Quiz3</a></td> -->
 </tr>
 </div>
 <h3><strong>Animals</strong></h3>
 <p>Select the correct answer in Tigrigna</p>
-<div id="quizA">
+<div id="quizA"></div>
 <div ng-repeat="animal in quiz.animals">
    <form name="myFormA"  ng-submit="quiz.check(animal.English, $index, $event)">
      <label>ኣነ ይፈቱ / I like </label>
@@ -34,4 +27,5 @@
    <label>Score</label>
    <div> {{quiz.totalRightAnswers}}/{{quiz.totalQuestionsA}}</div>
    <progressbar class="progress-striped" value="quiz.getPercentageA()" type="success">{{quiz.getPercentageA()}}%</progressbar>
+</div>
    

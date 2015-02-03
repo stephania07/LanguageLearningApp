@@ -169,66 +169,26 @@ footer {
     cursor: pointer;
     -webkit-transform: rotatex(-180deg);
 }
-#quizp {
-    /*//margin-left: 30px;*/
-}
+
 /*Quiz colors*/
 
 .col-xs-1 {
-    margin-right:  10px;
+    margin-right: 100px;
 }
 
 .col-xs-1 .word-img {
    margin-bottom: 50px;{
 }
-.row #answers {
+
+.answersC{
     width: 150px;
     margin-bottom: 60px;
 }
-/*#main {
-    width:600px;
-    height:200px;
-    position:relative;
-}
-#dropbox {
-            position: absolute;
-            width: 500px;
-            min-height: 200px;
-            border: 2px solid black;
-}
-#colorDiv {
-            position: absolute;
-            width: 120px;
-            min-height: 200px;
-            border: 2px solid black;
-            margin: 3px;
-            margin-top: 10px;
-}
- div.colorp {
-            float: left;
-            min-width: 160px;
-            min-height: 80px;
-            border: 2px solid green;
-            margin: 3px;
-            margin-top: 10px;
-            cursor: pointer;
-            /*font-weight: bold;*/
-}
-#colorDiv {
-    left: 350px;
-}
-ul li img {
-    height:20px;
-    widows: 10px;
-}
-#colorImg td{
-    height: 50px;
-    width: 50px;
-}*/
-/*search*/
-#focusedInput {
-    margin-left: 35%;
 
+/*search*/
+.focusedInput 
+{
+    margin-left: 400px;
 }
 /*media screen*/
 

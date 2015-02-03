@@ -46,13 +46,42 @@
 		controllerAs: 'vocal',
 		private: true
 	})
-
- //    .when('/greetings', {
- //        templateUrl : 'views/greetings.html',
- //        controller : 'GreetingsController',
- //        controllerAs : 'greetCtrl',
- //        private: true
-	// })
+	.when('/vocabulary/VocabularyAnimals', {
+		templateUrl : 'views/VocabularyAnimals.html',
+		controller : 'VocabularyController',
+		controllerAs: 'vocal',
+		private: true
+	})
+	.when('/vocabulary/vocabularydaysmonth', {
+		templateUrl : 'views/vocabularydaysmonth.html',
+		controller : 'VocabularyController',
+		controllerAs: 'vocal',
+		private: true
+	})
+	.when('/vocabulary/vocabularybodyface', {
+		templateUrl : 'views/vocabularybodyface.html',
+		controller : 'VocabularyController',
+		controllerAs: 'vocal',
+		private: true
+	})
+	.when('/vocabulary/vocabularyfruits', {
+		templateUrl : 'views/vocabularyfruits.html',
+		controller : 'VocabularyController',
+		controllerAs: 'vocal',
+		private: true
+	})
+    .when('/greetings', {
+        templateUrl : 'views/greetings.html',
+        controller : 'GreetingsController',
+        controllerAs : 'greetCtrl',
+        private: true
+	})
+	.when('/transiGreetings', {
+        templateUrl : 'views/transiGreetings.html',
+        controller : 'GreetingsController',
+        controllerAs : 'cardCtrl',
+        private: true
+	})
 
 	.when('/cards', {
         templateUrl : 'views/cards.html',
@@ -60,13 +89,6 @@
         controllerAs : 'cardCtrl',
         private: true
 	})
-
- //    .when('/cards/flashcards', {
- //        templateUrl : 'views/flashcards.html',
- //        controller : 'CardsController',
- //        controllerAs : 'cardCtrl',
- //        private: true
-	// })
 	.when('/cards/flip', {
         templateUrl : 'views/flip.html',
         controller : 'FlipController',

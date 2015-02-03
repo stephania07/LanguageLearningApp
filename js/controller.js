@@ -408,9 +408,6 @@
         };
         vm.totalRightAnswersC = 0;
         vm.totalQuestionsC = data.colors.length;
-        // console.log(data.colors);
-        // vm.Image1 = {quiz: 'Colors'};
-        // vm.Image2 = {};
       })
       .error(function(err){
         console.log(err);

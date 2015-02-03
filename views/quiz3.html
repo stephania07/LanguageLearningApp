@@ -18,21 +18,21 @@
       </div>
       <div class="col-xs-4">
         <div ng-repeat="number in quiz.numbers">
-          <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="quiz.responses" jqyoui-droppable="{onDrop: 'addToResponses(number)', index: {{number}}}" style="height: 80px; width: 80px; background-color: lightgrey; display: inline-block">
+          <div class="thumbnail" data-drop="true" data-jqyoui-options ng-model="quiz.responses" jqyoui-droppable="{onDrop: 'addToResponses(number)', index: {{number}}}" style="height: 80px; width: 80px; background-color: lightgrey; margin-right: 0; display: inline-block">
             <img ng-src="{{quiz.responses[number].Image}}" data-drag="false" data-jqyoui-options ng-model="quiz.responses" jqyoui-draggable  ng-hide="!quiz.responses[number].Image" class="word-img">
           </div>
         </div>
       </div>
       <div ng-repeat="answer in quiz.answers">
-        <button class="btn btn-primary">{{answer.Tigrigna}}</button>
+        <button style="height: 50px; width: 150px; background-color: blue; margin-bottom: 60px; color: white">{{answer.Tigrigna}}</button>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12">
+      <div class="col-xs-12" >
         <button class="btn btn-primary" ng-click="quiz.checkAnswers()">Check Answers</button>
       </div>
     </div>
-  </div>
+</div>
     <label >Score</label>
       <div> {{quiz.totalRightAnswersC}}/{{quiz.totalQuestionsC}}</div>
         <progressbar class="progress-striped" value="quiz.getPercentageC()" type="success">
