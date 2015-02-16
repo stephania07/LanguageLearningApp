@@ -51,6 +51,7 @@
             cb();
           } else {
             console.log("Error creating user:", error);
+            alert(error);
           }
         })
        };  
@@ -61,8 +62,10 @@
         }, function(error) {
           if (error === null) {
             console.log("Password reset email sent successfully");
+            alert("Password reset email sent successfully");
           } else {
             console.log("Error sending password reset email:", error);
+
           }
         });
     };

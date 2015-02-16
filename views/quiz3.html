@@ -24,7 +24,7 @@
         </div>
       </div>
       <div ng-repeat="answer in quiz.answers">
-        <button style="height: 50px; width: 150px; background-color: blue; margin-bottom: 60px; color: white">{{answer.Tigrigna}}</button>
+        <button id="btnclr" style="height: 50px; width: 150px; background-color: blue; margin-bottom: 60px; color: white">{{answer.Tigrigna}}</button>
       </div>
     </div>
     <div class="row">
@@ -38,25 +38,3 @@
         <progressbar class="progress-striped" value="quiz.getPercentageC()" type="success">
           {{quiz.getPercentageC()}}%
         </progressbar>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
