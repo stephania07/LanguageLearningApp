@@ -189,6 +189,16 @@ footer {
       margin-left: -43em;    
     }
 }
+@media screen and (max-width: 700px){
+    #ctrlbtn1{
+      float: right;            
+      margin-top: 10px;
+      height: 20px;
+      width: 50px;
+      padding: 0;
+      line-height: center;   
+    }
+}
 /*Flip cards*/
 .flip {
 	width: 150px;
